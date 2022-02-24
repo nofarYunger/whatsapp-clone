@@ -1,0 +1,27 @@
+
+# component structure
+
+<ChatApp/>
+    <ChatListContainer/>
+        <ChatListHeader/>
+        <ChatListSearchBar/>
+        <ChatList/>
+            ...<ChatPreview/>
+    <ChatRoom/>
+        <ChatRoomHeader/>
+        <chatRoomContent/>
+            <MessageList/>
+            ...<Message/>
+        <ChatRoomFooter/> //the name of the component will change 
+        
+    <OpenMenu/>
+
+
+# TODO
+    
+    #clone the react starter, install the dep and open a *private* repository
+    #make the component structure: open all empty files and name them properly
+    #run the app and make sure everything is connected.
+    #Create the demy data
+    #starting with the ChatApp start building the app left to right.
+
