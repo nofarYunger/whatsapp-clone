@@ -19,9 +19,9 @@
 
 # TODO
     
-    #clone the react starter, install the dep and open a *private* repository
-    #make the component structure: open all empty files and name them properly
-    #run the app and make sure everything is connected.
-    #Create the demy data
-    #starting with the ChatApp start building the app left to right.
+v   #clone the react starter, install the dep and open a *private* repository 
+v   #make the component structure: open all empty files and name them properly
+v   #run the app and make sure everything is connected.
+v   #Create the demy data
+v  #starting with the ChatApp start building the app left to right.
 

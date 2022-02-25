@@ -1,11 +1,18 @@
-.overlay {
-  backdrop-filter: blur(3 px);
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background-color: rgba(8, 8, 8, 0.61);
-  top: 0;
-  right: 0;
-  overflow-y: scroll;
-  z-index: 2;
+//whatsapp background for wide screens.
+html {
+  background: linear-gradient(
+    to bottom,
+    $whatsapp-dark-teal 1px,
+    $whatsapp-dark-teal 130px,
+    #dddbd1 131px,
+    #d2dbdc 100%
+  );
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+.header {
+  height: 60px;
+  padding: 10px 16px;
+  flex-shrink: 0;
+  background-color: $bg-grey;
 }

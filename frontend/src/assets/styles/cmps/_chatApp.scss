@@ -1,0 +1,55 @@
+.chat-app {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    max-height: 100vh;
+
+    > * {
+        @media #{$not-wide-breakpoint} {
+            max-height: 100vh;
+        }
+        @media #{$wide-screen-breakpoint} {
+            max-height: calc(100vh - 40px);
+        }
+    }
+    @media #{$wide-screen-breakpoint} {
+        top: 20px;
+        bottom: 20px;
+        width: 1396px;
+        margin: 0 auto;
+    }
+
+    // TODO: MAKE THE MOBILE DESIGN!!!
+
+    @media #{$narrow-breakpoint} {
+        .chat-room {
+            flex: 60%;
+        }
+        .chat-list-container {
+            flex: 40%;
+        }
+    }
+
+    @media #{$rgl-screen-breakpoint} {
+        .chat-room {
+            flex: 65%;
+        }
+        .chat-list-container {
+            flex: 35%;
+        }
+    }
+
+    @media #{$wide-screen-breakpoint} {
+        .chat-room {
+            flex: 70%;
+        }
+        .chat-list-container {
+            flex: 30%;
+        }
+    }
+}

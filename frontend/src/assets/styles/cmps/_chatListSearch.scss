@@ -1,0 +1,73 @@
+.chat-list-search-bar {
+    position: relative;
+    z-index: 100;
+    box-sizing: border-box;
+    flex: none;
+    height: 49px;
+    transition: box-shadow 0.18s ease-out, background-color 0.25s ease-out;
+    background-color: $bg-white;
+    box-shadow: 0 2px 3px $shadow-light;
+}
+.blank-btn,
+.blank-input {
+    background-color: transparent;
+
+    border: none;
+    outline: none;
+}
+.input-wrapper {
+    position: absolute;
+    top: 7px;
+    right: 14px;
+    left: 12px;
+    height: 35px;
+    padding-right: 32px;
+    padding-left: 65px;
+    background: $bg-grey;
+    border-radius: 8px;
+}
+
+.search-bar-btn {
+    cursor: pointer;
+    pointer-events: all;
+    position: absolute;
+    top: 12px;
+    z-index: 100;
+    width: 24px;
+    height: 24px;
+    left: 24px;
+
+    .search-icon,
+    .go-back-icon {
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+}
+.search-icon {
+    transition: all 0.24s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: rotate(0);
+}
+
+.go-back-icon {
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(0.8) rotate(225deg);
+
+    svg {
+        color: $whatsapp-teal !important;
+    }
+}
+.search-bar-btn.active-search {
+    .search-icon {
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.24s cubic-bezier(0.4, 0, 0.2, 1) 0.06s;
+        transform: rotate(135deg);
+    }
+    .go-back-icon {
+        opacity: 1;
+        transform: scale(1) rotate(1turn);
+    }
+}

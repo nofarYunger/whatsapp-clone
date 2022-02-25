@@ -1,0 +1,85 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Jon Dow",
+      "thumbnail": "https://res.cloudinary.com/nofar/image/upload/v1611081607/oge850vneveabeu4f9va.png"
+    },
+    {
+      "id": 2,
+      "username": "Miki Maka",
+      "thumbnail": "https://res.cloudinary.com/nofar/image/upload/v1610697822/fmm9jhmzswwrvb9iwbku.jpg"
+    },
+    {
+      "id": 3,
+      "username": "Lady Gaga",
+      "thumbnail": "https://res.cloudinary.com/nofar/image/upload/v1610702495/ygxow9dsfc0ai2oliwpf.jpg"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "type": "text",
+      "senderId": 1,
+      "receiverId": 2,
+      "content": "hi whats up?",
+      "timeStamp":1645750818629
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "senderId": 2,
+      "receiverId": 1,
+      "content": "fine, a little tired.",
+      "timeStamp":1645750818650
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "senderId": 2,
+      "receiverId": 1,
+      "content": "what about you?",
+      "timeStamp":1645750818729
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "senderId": 1,
+      "receiverId": 2,
+      "content": "me too!!",
+      "timeStamp":1645750819029
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "senderId": 1,
+      "receiverId": 2,
+      "content": "it's like 3 in the morning now and im talking to myself",
+      "timeStamp":1645750819129
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "senderId": 2,
+      "receiverId": 1,
+      "content": "thats not so good. maybe you should go to sleep?",
+      "timeStamp":1645750819229
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "senderId": 1,
+      "receiverId": 2,
+      "content": "good idea. lila tov lecha.",
+      "timeStamp":1645750819929
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "senderId": 2,
+      "receiverId": 1,
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste incidunt voluptatum, ducimus, tempora itaque veritatis impedit molestias consequatur pariatur eius officiis, in ipsa repellendus iure aliquam eos sapiente nisi architecto?",
+      "timeStamp":1645750819929
+    }
+  ]
+}
