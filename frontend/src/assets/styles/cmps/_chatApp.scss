@@ -10,14 +10,14 @@
     max-height: 100vh;
 
     > * {
-        @media #{$not-wide-breakpoint} {
+        @media #{$not-breakpoint4} {
             max-height: 100vh;
         }
-        @media #{$wide-screen-breakpoint} {
+        @media #{$breakpoint4} {
             max-height: calc(100vh - 40px);
         }
     }
-    @media #{$wide-screen-breakpoint} {
+    @media #{$breakpoint4} {
         top: 20px;
         bottom: 20px;
         width: 1396px;
@@ -26,7 +26,7 @@
 
     // TODO: MAKE THE MOBILE DESIGN!!!
 
-    @media #{$narrow-breakpoint} {
+    @media #{$breakpoint1} {
         .chat-room {
             flex: 60%;
         }
@@ -35,7 +35,7 @@
         }
     }
 
-    @media #{$rgl-screen-breakpoint} {
+    @media #{$breakpoint3} {
         .chat-room {
             flex: 65%;
         }
@@ -44,7 +44,7 @@
         }
     }
 
-    @media #{$wide-screen-breakpoint} {
+    @media #{$breakpoint4} {
         .chat-room {
             flex: 70%;
         }

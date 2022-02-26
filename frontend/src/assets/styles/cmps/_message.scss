@@ -1,6 +1,133 @@
 .message-wrapper {
+    padding: 0px 5%;
+    width: 100%;
+    margin-bottom: 12px;
+    
+    @media #{$breakpoint1} {
+        padding: 0px 5.5%;
+    }
+    @media #{$breakpoint2} {
+        padding: 0px 6%;
+    }
+    @media #{$breakpoint3} {
+        padding: 0px 7%;
+    }
+    @media #{$breakpoint4} {
+        padding: 0px 9%;
+    }
+    &.message-in {
+        justify-content: flex-start;
+    }
+    &.message-out {
+        justify-content: flex-end;
+    }
 }
 
-.message {
-    padding: 6px 7px 8px 9px;
+.message-container {
+    color: $txt-primary;
+    border-radius: 8px;
+    box-shadow: 0 1px 0.5px $shadow-light;
+    position: relative;
+
+    &.message-in {
+        border-top-left-radius: 0;
+        background-color: $bg-white;
+        margin-right: 50px;
+
+        @media #{$breakpoint3} {
+            margin-right: 70px;
+        }
+        @media #{$breakpoint4} {
+            margin-right: 90px;
+        }
+    }
+    &.message-out {
+        background-color: $msg-green;
+        border-top-right-radius: 0;
+        margin-left: 50px;
+
+        @media #{$breakpoint3} {
+            margin-left: 70px;
+        }
+        @media #{$breakpoint4} {
+            margin-left: 90px;
+        }
+    }
+
+    .message {
+        position: relative;
+        cursor: pointer;
+        user-select: text;
+        padding: 6px 7px 8px 9px;
+        width: fit-content;
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
+
+        span {
+            color: $txt-grey;
+            vertical-align: top;
+            padding-top: 5px;
+            float: right;
+            svg {
+                color: #8696a0;
+            }
+        }
+
+        //----------------------------------- talk bubble  -----------------------------------
+        &.first-message {
+            &::before {
+                position: absolute;
+                left: -10px;
+                top: 0;
+                content: "";
+                display: block;
+                border: solid;
+                border-width: 0px 16px 16px 0px;
+                border-color: transparent;
+                border-right-color: $bg-white;
+                color: $bg-white;
+            }
+        }
+
+        &.message-out .message::before {
+            left: auto;
+            right: -28px;
+            border-width: 0px 16px 16px 16px;
+            border-color: transparent;
+            border-left-color: $msg-green;
+            color: $msg-green;
+        }
+    }
+
+    //----------------------------------- option btn arrow ---------------------------------
+    .options-btn {
+        opacity: 0;
+        position: absolute;
+        top: 3px;
+        right: 5px;
+        pointer-events: none;
+        background: transparent;
+        transform: translateX(10px);
+        transition: all 0.2s ease-in-out;
+        svg {
+            width: 30px;
+            height: 30px;
+            color: #8696a0;
+        }
+    }
+
+    &:hover .options-btn {
+        transform: translateX(0px);
+        opacity: 1;
+        cursor: pointer;
+        pointer-events: unset;
+    }
+    &.message-out &:hover .options-btn {
+        background: $msg-green;
+        box-shadow: 0 1px 12px 1px $msg-green;
+    }
+    &.message-in &:hover .options-btn {
+        background: $bg-white;
+        box-shadow: 0 1px 12px 1px $bg-white;
+    }
 }
