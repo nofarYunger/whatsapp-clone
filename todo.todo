@@ -1,0 +1,9 @@
+todo:
+# finish the chat-list:
+    * make a time format hook or use a library for the time in the preview.
+    * get from prop the chat details and render them.
+    * not-open conversation scenario (update the ui) 
+    * make a ChatList cmp..
+
+    chat-room:
+    design the chat room  

@@ -1,0 +1,20 @@
+.chat-room .header {
+    border-left: 1px solid #d1d7db;
+    padding: 10px 16px;
+}
+
+.avatar-container {
+    padding: 0 15px 0 0;
+}
+.title p {
+    @include trim;
+}
+
+.chat-info,
+.title {
+    flex-grow: 1;
+}
+.chat-icons,
+.avatar-container {
+    flex: none;
+}

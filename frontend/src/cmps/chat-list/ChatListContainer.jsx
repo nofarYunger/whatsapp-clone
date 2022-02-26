@@ -1,19 +1,29 @@
 import React from "react";
-import { ChatListHeader, ChatList,ChatPreview, ChatListSearchBar } from "./";
+import { useState, useEffect } from "react";
+import { chatService } from "../../services/chatService";
+import { ChatListHeader, ChatList, ChatListSearchBar } from "./";
 
 function ChatListContainer() {
+  const [chatsToShow, setChatsToShow] = useState([]);
+  const [filterBy, setFilterBy] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const query = async () => {
+    setIsLoading(true);
+    const chats = await chatService.query(filterBy);
+    setChatsToShow(chats);
+    setIsLoading(false);
+  };
+
+  useEffect(() => {
+    query();
+  }, [filterBy]);
+
   return (
     <section className="chat-list-container">
       <ChatListHeader />
       <ChatListSearchBar />
-      <ChatPreview/>
-      <ChatPreview/>
-      <ChatPreview/>
-      <ChatPreview/>
-      <ChatPreview/>
-      <ChatPreview/>
-      <ChatPreview/>
-      {/* <ChatList /> */}
+      <ChatList chats={chatsToShow} />
     </section>
   );
 }

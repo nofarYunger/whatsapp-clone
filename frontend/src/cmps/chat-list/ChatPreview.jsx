@@ -1,28 +1,31 @@
 import React from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import UseTimeFormat from "../../hooks/UseTimeFormat";
 
-
-function ChatPreview() {
+function ChatPreview({ chat }) {
   return (
     <div className="chat-preview flex align-center">
       <div className="avatar-wrapper">
         <div className="avatar flex">
-          <img
-            src="https://res.cloudinary.com/nofar/image/upload/v1611081607/oge850vneveabeu4f9va.png"
-            alt=""
-          />
+          <img src={chat.thumbnail} alt="Thumbnail" />
         </div>
       </div>
       <div className="preview-content flex col ">
         <div className="top-row flex">
-          <p className="chat-title">Nofar Yunger</p>
-          <div className="last-msg-timestamp">23:22</div>
+          <div className="chat-title">
+            <p>{chat.title}</p>
+          </div>
+          <div className="last-msg-timestamp">
+            {UseTimeFormat(chat.lastMsg.date)}
+          </div>
         </div>
         <div className="bottom-row flex">
-          <p className="last-msg">so what do u think?</p>
+          <div className="last-msg">
+            <p>{chat.lastMsg.content}</p>
+          </div>
           <ul className="extra-preview-icons">
             <li className="open-menu-btn">
-              <MdKeyboardArrowDown/>
+              <MdKeyboardArrowDown />
             </li>
           </ul>
         </div>

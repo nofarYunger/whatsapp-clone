@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Message from "./Message";
 
-function MessageList() {
+function MessageList({ msgs }) {
   return (
-    <div>MessageList</div>
-  )
+    <section className="message-list">
+      {msgs.map((msg) => {
+        return <Message key={msg.id} msg={msg} />;
+      })}
+    </section>
+  );
 }
 
-export default MessageList
+export default MessageList;

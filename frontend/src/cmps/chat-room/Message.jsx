@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-function Message() {
+function Message({ msg }) {
   return (
-    <div>Message</div>
-  )
+    <div className="message-wrapper flex">
+      <div className="message"></div>
+    </div>
+  );
 }
 
-export default Message
+export default Message;

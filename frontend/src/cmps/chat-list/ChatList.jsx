@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import ChatPreview from "./ChatPreview";
 
-function ChatList() {
+function ChatList({ chats }) {
   return (
-    <div>ChatList</div>
-  )
+    <section className="chat-list">
+      {chats.map((chat,idx) => {
+        return <ChatPreview chat={chat}  key={idx}/>;
+      })}
+    </section>
+  );
 }
 
-export default ChatList
+export default ChatList;

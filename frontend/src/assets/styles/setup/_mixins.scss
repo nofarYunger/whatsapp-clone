@@ -54,6 +54,8 @@
     white-space:nowrap; 
     overflow:hidden; 
     display:block;
+    overflow-x: hidden;
+    
 }
 @mixin scroll{ 
     overflow-y:auto; 

@@ -23,6 +23,7 @@ function ChatListHeader() {
         <div className="icon-wrapper flex center">
           <BsThreeDotsVertical />
         </div>
+        
       </div>
     </header>
   );

@@ -2,7 +2,9 @@ import React from 'react'
 
 function ChatRoomContent() {
   return (
-    <div>ChatRoomContent</div>
+    <section className='chat-room-content'>
+      
+    </section>
   )
 }
 
