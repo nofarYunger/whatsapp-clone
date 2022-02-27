@@ -4,10 +4,11 @@
 
 .icon-wrapper {
     padding: 8px;
-    &:focus {
-        background-color: $btn-focus;
-        border-radius: 50%;
-    }
+    cursor: pointer;
+}
+.header .icon-wrapper:active {
+    background-color: $btn-focus;
+    border-radius: 50%;
 }
 
 .avatar-wrapper {

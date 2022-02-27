@@ -1,6 +1,9 @@
 .chat-room .header {
     border-left: 1px solid #d1d7db;
     padding: 10px 16px;
+    @media #{$breakpoint-mobile} {
+        padding: 0;
+    }
 }
 
 .avatar-container {

@@ -8,7 +8,7 @@ function ChatListHeader() {
 
   return (
     <header className="header chat-list-header flex">
-      <div className="avatar-wrapper">
+      <div className="avatar-wrapper flex align-center">
         <div className="avatar">
           <img
             src="https://res.cloudinary.com/nofar/image/upload/v1611081607/oge850vneveabeu4f9va.png"
@@ -25,10 +25,15 @@ function ChatListHeader() {
         </div>
         <div
           className="icon-wrapper option-btn flex center "
-          onClick={toggleOptionMenu}
+          onClick={() => setIsOptionOpen((prevState) => !prevState)}
         >
           <BsThreeDotsVertical />
-          {isOptionOpen && <OpenMenu options={options} />}
+          <div className={`menu-wrapper ${isOptionOpen ? "open" : ""}`}>
+            <OpenMenu
+              options={options}
+              closeMenu={() => setIsOptionOpen(false)}
+            />
+          </div>
         </div>
       </div>
     </header>
