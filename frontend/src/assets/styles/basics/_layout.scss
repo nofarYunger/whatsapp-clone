@@ -24,3 +24,14 @@ html {
     }
   }
 }
+
+@media #{$breakpoint-mobile} {
+  &.desktop-only {
+    display: none !important;
+  }
+}
+@media #{$breakpoint1} {
+  &.mobile-only {
+    display: none !important;
+  }
+}

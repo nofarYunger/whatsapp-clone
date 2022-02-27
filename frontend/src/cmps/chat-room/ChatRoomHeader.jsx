@@ -1,13 +1,15 @@
 import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineArrowLeft, AiOutlineSearch } from "react-icons/ai";
+import { FaVideo } from "react-icons/fa";
+import { HiPhone } from "react-icons/hi";
 
-function ChatRoomHeader({toggleMobileChatRoom}) {
+function ChatRoomHeader({ toggleMobileChatRoom }) {
   return (
     <header className="header flex space-between">
       <div className="chat-info flex align-center">
         <div
-          className="icon-wrapper mobile-go-back"
+          className="icon-wrapper mobile-only go-back"
           onClick={toggleMobileChatRoom}
         >
           <AiOutlineArrowLeft />
@@ -24,11 +26,17 @@ function ChatRoomHeader({toggleMobileChatRoom}) {
         </div>
       </div>
       <div className="chat-icons flex align-center">
-        <div className="icon-wrapper flex center">
+        <div className="icon-wrapper desktop-only flex center">
           <AiOutlineSearch />
         </div>
+        <div className="icon-wrapper mobile-only flex center">
+          <HiPhone />
+        </div>
+        <div className="icon-wrapper mobile-only flex center">
+          <FaVideo />
+        </div>
 
-        <div className="icon-wrapper flex center">
+        <div className="icon-wrapper  flex center">
           <BsThreeDotsVertical />
         </div>
       </div>

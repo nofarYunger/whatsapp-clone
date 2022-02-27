@@ -6,7 +6,7 @@ function ChatListSearchBar() {
   const [isSearchActive, setIsSearchActive] = useState(false);
 
   return (
-    <div className="chat-list-search-bar">
+    <div className="chat-list-search-bar desktop-only">
       <div className="search-bar-wrapper">
        {isSearchActive} 
         <button
