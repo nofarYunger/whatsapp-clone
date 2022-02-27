@@ -10,7 +10,7 @@ function ChatListContainer() {
 
   const query = async () => {
     setIsLoading(true);
-    const chats = await chatService.query(filterBy);
+    const chats = await chatService.getChats(filterBy);
     setChatsToShow(chats);
     setIsLoading(false);
   };
