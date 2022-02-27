@@ -24,9 +24,11 @@ function Message({ msg }) {
       >
         <div className="message">
           <p>{msg.content}</p>
-          <span>
-            <BiCheckDouble />
-          </span>
+          {isSender() && (
+            <span>
+              <BiCheckDouble />
+            </span>
+          )}
           <span>{format(msg.date, "kk:mm")}</span>
           <div className="options-btn">
             <MdKeyboardArrowDown />

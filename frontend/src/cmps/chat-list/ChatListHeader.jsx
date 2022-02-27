@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsFillChatLeftTextFill, BsThreeDotsVertical } from "react-icons/bs";
 import { FaCircleNotch } from "react-icons/fa";
+import OpenMenu from "../util/OpenMenu";
 
 function ChatListHeader() {
+  const [isOptionOpen, setIsOptionOpen] = useState(false);
+
   return (
     <header className="header chat-list-header flex">
       <div className="avatar-wrapper">
@@ -20,13 +23,24 @@ function ChatListHeader() {
         <div className="icon-wrapper flex center">
           <BsFillChatLeftTextFill />
         </div>
-        <div className="icon-wrapper flex center">
+        <div
+          className="icon-wrapper option-btn flex center "
+          onClick={toggleOptionMenu}
+        >
           <BsThreeDotsVertical />
+          {isOptionOpen && <OpenMenu options={options} />}
         </div>
-        
       </div>
     </header>
   );
 }
 
 export default ChatListHeader;
+
+const options = [
+  { title: "New group", func: () => console.log("New group") },
+  { title: "Archived", func: () => console.log("Archived") },
+  { title: "Starred messages", func: () => console.log("Starred messages") },
+  { title: "Settings", func: () => console.log("Starred messages") },
+  { title: "Log out", func: () => console.log("Starred messages") },
+];

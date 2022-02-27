@@ -1,0 +1,29 @@
+.open-menu {
+    position: absolute;
+    top: 44px;
+    z-index: 1000;
+    max-width: 340px;
+    right: 4px;
+    background-color: $bg-white;
+    padding: 9px 0;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px 0 rgba($shadow, 0.26), 0 2px 10px 0 rgba($shadow, 0.16);
+    &.opened {
+    }
+
+    .option {
+        padding: 13px 58px 0px 24px;
+        cursor: pointer;
+        position: relative;
+        flex-grow: 1;
+        height: 40px;
+        font-size: 14.5px;
+        line-height: 14.5px;
+        color: $txt-secondary;
+        @include trim;
+        transition: all 0.2s;
+        &:hover {
+            background-color: $bg-hover;
+        }
+    }
+}

@@ -1,9 +1,13 @@
-.header-icons{
+.header-icons {
     gap: 7px;
 }
 
 .icon-wrapper {
     padding: 8px;
+    &:focus {
+        background-color: $btn-focus;
+        border-radius: 50%;
+    }
 }
 
 .avatar-wrapper {

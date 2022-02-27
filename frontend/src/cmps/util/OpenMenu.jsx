@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
 
-function OpenMenu() {
+function OpenMenu({ options }) {
   return (
-    <div>OpenMenu</div>
-  )
+    <div className="open-menu">
+      <ul>
+        {options?.map((option) => {
+          return (
+            <li onClick={option.func} className="option">
+              {option.title}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
 }
 
-export default OpenMenu
+export default OpenMenu;

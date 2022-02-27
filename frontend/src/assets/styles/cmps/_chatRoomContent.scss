@@ -1,7 +1,7 @@
 .chat-room-content {
     height: 100%;
-    width:  100%;
+    width: 100%;
     background-image: url("../../images/background-light.png");
     background-repeat: repeat-x;
-object-fit: fill;
+    background-size: contain;
 }

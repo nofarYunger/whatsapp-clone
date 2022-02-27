@@ -2,7 +2,7 @@
     padding: 0px 5%;
     width: 100%;
     margin-bottom: 12px;
-    
+
     @media #{$breakpoint1} {
         padding: 0px 5.5%;
     }
@@ -62,42 +62,45 @@
         width: fit-content;
         overflow-wrap: break-word;
         white-space: pre-wrap;
-
+        p {
+            padding-bottom: 5px;
+        }
         span {
             color: $txt-grey;
             vertical-align: top;
-            padding-top: 5px;
             float: right;
+
             svg {
+                padding-bottom: 5px;
                 color: #8696a0;
             }
         }
 
         //----------------------------------- talk bubble  -----------------------------------
-        &.first-message {
-            &::before {
-                position: absolute;
-                left: -10px;
-                top: 0;
-                content: "";
-                display: block;
-                border: solid;
-                border-width: 0px 16px 16px 0px;
-                border-color: transparent;
-                border-right-color: $bg-white;
-                color: $bg-white;
-            }
-        }
-
-        &.message-out .message::before {
-            left: auto;
-            right: -28px;
-            border-width: 0px 16px 16px 16px;
+        // &.first-message {
+        &::before {
+            position: absolute;
+            left: -10px;
+            top: 0;
+            content: "";
+            display: block;
+            border: solid;
+            border-width: 0px 16px 16px 0px;
             border-color: transparent;
-            border-left-color: $msg-green;
-            color: $msg-green;
+            border-right-color: $bg-white;
+            color: $bg-white;
         }
     }
+
+    &.message-out .message::before {
+        left: auto;
+        right: -28px;
+        border-width: 0px 16px 16px 16px;
+        border-color: transparent;
+        border-left-color: $msg-green;
+        color: $msg-green;
+    }
+    // }
 
     //----------------------------------- option btn arrow ---------------------------------
     .options-btn {
