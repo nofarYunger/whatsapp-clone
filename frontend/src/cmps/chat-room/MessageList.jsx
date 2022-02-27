@@ -4,10 +4,10 @@ import Message from "./Message";
 function MessageList({ msgs }) {
   return (
     <section className="message-list">
-        
-      {msgs.map((msg) => {
-        return <Message key={msg.id} msg={msg} />;
-      })}
+      {msgs &&
+        msgs.map((msg) => {
+          return <Message key={msg.id} msg={msg} />;
+        })}
     </section>
   );
 }

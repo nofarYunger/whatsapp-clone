@@ -9,12 +9,11 @@ function ChatPreview({ chat }) {
   const currentChatId = useSelector((state) => state.chatReducer);
   const dispatch = useDispatch();
   const { updCurrChat } = bindActionCreators(actions, dispatch);
-
+console.log(chat);
   const isActive = () => {
     if (chat.id === currentChatId) return true;
     return false;
   };
-
   return (
     <div
       className={`chat-preview flex align-center ${isActive ? "currChat" : ""}`}
@@ -28,7 +27,7 @@ function ChatPreview({ chat }) {
       <div className="preview-content flex col ">
         <div className="top-row flex">
           <div className="chat-title">
-            <p>{chat.title}</p>
+            <p>{chat.name}</p>
           </div>
           <div className="last-msg-timestamp">
             {UseTimeFormat(chat.lastMsg.date)}

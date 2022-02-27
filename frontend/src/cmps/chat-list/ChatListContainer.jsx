@@ -12,6 +12,7 @@ function ChatListContainer() {
     setIsLoading(true);
     const chats = await chatService.getChats(filterBy);
     setChatsToShow(chats);
+    console.log(chatsToShow);
     setIsLoading(false);
   };
 

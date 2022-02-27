@@ -11,8 +11,9 @@ async function getChats() {
   try {
     let chats = await storageService.load("CHATS");
     if (!chats?.length) {
-      chats = data.users;
+      chats = data.chats;
     }
+
     return Promise.resolve(chats);
   } catch (error) {
     console.log(error); //todo: address errors and put a message to inform the users
