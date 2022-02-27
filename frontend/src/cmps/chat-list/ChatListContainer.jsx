@@ -22,7 +22,7 @@ function ChatListContainer() {
   return (
     <section className="chat-list-container">
       <ChatListHeader />
-      <ChatListSearchBar />
+      <ChatListSearchBar filterBy={filterBy} setFilterBy={setFilterBy} />
       <ChatList chats={chatsToShow} />
     </section>
   );

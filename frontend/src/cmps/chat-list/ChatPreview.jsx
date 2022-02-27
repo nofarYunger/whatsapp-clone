@@ -1,10 +1,25 @@
 import React from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import UseTimeFormat from "../../hooks/UseTimeFormat";
+import { useDispatch, useSelector } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as actions from "../../store/actions/chatAction";
 
 function ChatPreview({ chat }) {
+  const currentChatId = useSelector((state) => state.chatReducer);
+  const dispatch = useDispatch();
+  const { updCurrChat } = bindActionCreators(actions, dispatch);
+
+  const isActive = () => {
+    if (chat.id === currentChatId) return true;
+    return false;
+  };
+
   return (
-    <div className="chat-preview flex align-center">
+    <div
+      className={`chat-preview flex align-center ${isActive ? "currChat" : ""}`}
+      onClick={() => updCurrChat(chat.id)}
+    >
       <div className="avatar-wrapper">
         <div className="avatar flex">
           <img src={chat.thumbnail} alt="Thumbnail" />

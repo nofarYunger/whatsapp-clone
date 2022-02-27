@@ -9,7 +9,7 @@
 
 # production
 **/build
-frontend/.eslintcache
+*.eslintcache
 # misc
 *.DS_Store
 *.env.local
@@ -23,5 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # just for now:
-**/store
+
 
