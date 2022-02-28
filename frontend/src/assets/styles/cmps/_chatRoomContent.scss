@@ -2,9 +2,11 @@
     height: 100%;
     width: 100%;
     background-image: url("../../images/background-light.png");
-    background-repeat: repeat-x;
+    background-repeat: repeat;
     background-size: contain;
+    overflow-y: scroll;
 }
-.chat-list {
+.message-list {
     padding-top: 20px;
+    max-width: 100%;
 }

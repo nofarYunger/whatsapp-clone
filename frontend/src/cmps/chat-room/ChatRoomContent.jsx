@@ -6,11 +6,10 @@ import { MessageList } from ".";
 import { chatService } from "../../services/chatService";
 
 function ChatRoomContent() {
-  const currentChatId = useSelector((state) => state.chatReducer);
+  const {currentChatId} = useSelector((state) => state.chatReducer);
   const [msgs, setMsgs] = useState([]);
 
   useEffect(async () => {
-    console.log("gets the msgs");
     const messages = await chatService.getChatMessages(currentChatId);
     setMsgs(messages);
   }, [currentChatId]);

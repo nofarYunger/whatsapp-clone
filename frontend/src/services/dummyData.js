@@ -24,7 +24,7 @@ const chats = [
     typing: true,
     lastMsg: {
       chatId: 1,
-      date: new Date(),
+      timeStamp: new Date(),
       senderId: 1,
       receiverId: 2,
       content: utilService.getRandomSentence(),
@@ -42,7 +42,7 @@ const chats = [
     typing: false,
     lastMsg: {
       chatId: 1,
-      date: new Date(),
+      timeStamp: new Date(),
       senderId: 1,
       receiverId: 2,
       content: utilService.getRandomSentence(),
@@ -60,7 +60,7 @@ const chats = [
     typing: false,
     lastMsg: {
       chatId: 2,
-      date: new Date(),
+      timeStamp: new Date(),
       senderId: 3,
       receiverId: 1,
       content: utilService.getRandomSentence(),
@@ -78,7 +78,7 @@ const chats = [
     typing: false,
     lastMsg: {
       chatId: 3,
-      date: new Date(),
+      timeStamp: new Date(),
       senderId: 4,
       receiverId: 1,
       content: utilService.getRandomSentence(),
@@ -96,7 +96,7 @@ const chats = [
     typing: false,
     lastMsg: {
       chatId: 4,
-      date: new Date(),
+      timeStamp: new Date(),
       senderId: 1,
       receiverId: 4,
       content: utilService.getRandomSentence(),
@@ -114,7 +114,7 @@ const chats = [
     typing: false,
     lastMsg: {
       chatId: 5,
-      date: new Date(),
+      timeStamp: new Date(),
       senderId: 6,
       receiverId: 1,
       content: utilService.getRandomSentence(),
@@ -132,7 +132,7 @@ const chats = [
     typing: true,
     lastMsg: {
       chatId: 6,
-      date: new Date(),
+      timeStamp: new Date(),
       senderId: 7,
       receiverId: 1,
       content: utilService.getRandomSentence(),
@@ -150,7 +150,7 @@ const chats = [
     typing: false,
     lastMsg: {
       chatId: 7,
-      date: new Date(),
+      timeStamp: new Date(),
       senderId: 1,
       receiverId: 8,
       content: utilService.getRandomSentence(),
@@ -168,7 +168,7 @@ const chats = [
     typing: false,
     lastMsg: {
       chatId: 8,
-      date: new Date(),
+      timeStamp: new Date(),
       senderId: 9,
       receiverId: 1,
       content: utilService.getRandomSentence(),
@@ -186,7 +186,7 @@ const chats = [
     typing: true,
     lastMsg: {
       chatId: 9,
-      date: new Date(),
+      timeStamp: new Date(),
       senderId: 1,
       receiverId: 10,
       content: utilService.getRandomSentence(),
@@ -204,7 +204,7 @@ const chats = [
     typing: false,
     lastMsg: {
       chatId: 10,
-      date: new Date(),
+      timeStamp: new Date(),
       senderId: 11,
       receiverId: 1,
       content: utilService.getRandomSentence(),
@@ -216,7 +216,7 @@ const msgs = [
   {
     id: 1,
     chatId: 1,
-    date: "Sun Feb 26 2022 22:28:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 1,
     receiverId: 2,
     content: utilService.getRandomSentence(),
@@ -224,7 +224,7 @@ const msgs = [
   {
     id: 2,
     chatId: 1,
-    date: "Sun Feb 26 2022 22:29:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 1,
     receiverId: 2,
     content: utilService.getRandomSentence(),
@@ -232,7 +232,7 @@ const msgs = [
   {
     id: 3,
     chatId: 1,
-    date: "Sun Feb 26 2022 22:32:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 2,
     receiverId: 1,
     content: utilService.getRandomSentence(),
@@ -240,7 +240,7 @@ const msgs = [
   {
     id: 4,
     chatId: 1,
-    date: "Sun Feb 26 2022 22:40:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 1,
     receiverId: 2,
     content: utilService.getRandomSentence(),
@@ -248,7 +248,7 @@ const msgs = [
   {
     id: 5,
     chatId: 1,
-    date: "Sun Feb 26 2022 22:42:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 2,
     receiverId: 1,
     content: utilService.getRandomSentence(),
@@ -256,7 +256,7 @@ const msgs = [
   {
     id: 6,
     chatId: 1,
-    date: "Sun Feb 26 2022 22:58:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 1,
     receiverId: 2,
     content: utilService.getRandomSentence(),
@@ -264,7 +264,7 @@ const msgs = [
   {
     id: 7,
     chatId: 1,
-    date: "Sun Feb 26 2022 22:59:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 1,
     receiverId: 2,
     content: utilService.getRandomSentence(),
@@ -272,7 +272,7 @@ const msgs = [
   {
     id: 8,
     chatId: 1,
-    date: "Sun Feb 26 2022 23:02:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 1,
     receiverId: 2,
     content: utilService.getRandomSentence(),
@@ -280,15 +280,7 @@ const msgs = [
   {
     id: 9,
     chatId: 1,
-    date: "Sun Feb 27 2022 23:05:30 GMT+0200 (Israel Standard Time)",
-    senderId: 2,
-    receiverId: 1,
-    content: utilService.getRandomSentence(),
-  },
-  {
-    id: 9,
-    chatId: 1,
-    date: "Sun Feb 27 2022 23:07:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 1,
     receiverId: 2,
     content: utilService.getRandomSentence(),
@@ -296,7 +288,7 @@ const msgs = [
   {
     id: 10,
     chatId: 1,
-    date: "Sun Feb 27 2022 23:08:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 1,
     receiverId: 2,
     content: utilService.getRandomSentence(),
@@ -304,7 +296,7 @@ const msgs = [
   {
     id: 11,
     chatId: 2,
-    date: "Sun Feb 12 2022 07:00:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 3,
     receiverId: 1,
     content: utilService.getRandomSentence(),
@@ -312,7 +304,7 @@ const msgs = [
   {
     id: 12,
     chatId: 2,
-    date: "Sun Feb 12 2022 07:03:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 3,
     receiverId: 1,
     content: utilService.getRandomSentence(),
@@ -320,7 +312,7 @@ const msgs = [
   {
     id: 13,
     chatId: 2,
-    date: "Sun Feb 12 2022 07:03:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 3,
     receiverId: 1,
     content: utilService.getRandomSentence(),
@@ -328,7 +320,7 @@ const msgs = [
   {
     id: 14,
     chatId: 2,
-    date: "Sun Feb 12 2022 07:14:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 1,
     receiverId: 3,
     content: utilService.getRandomSentence(),
@@ -336,7 +328,7 @@ const msgs = [
   {
     id: 15,
     chatId: 2,
-    date: "Sun Feb 12 2022 07:22:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 3,
     receiverId: 1,
     content: utilService.getRandomSentence(),
@@ -344,7 +336,7 @@ const msgs = [
   {
     id: 16,
     chatId: 3,
-    date: "Sun Feb 12 2022 07:00:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 4,
     receiverId: 1,
     content: utilService.getRandomSentence(),
@@ -352,7 +344,7 @@ const msgs = [
   {
     id: 17,
     chatId: 3,
-    date: "Sun Feb 12 2022 07:01:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 4,
     receiverId: 1,
     content: utilService.getRandomSentence(),
@@ -360,7 +352,7 @@ const msgs = [
   {
     id: 18,
     chatId: 3,
-    date: "Sun Feb 12 2022 07:06:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 1,
     receiverId: 4,
     content: utilService.getRandomSentence(),
@@ -368,7 +360,7 @@ const msgs = [
   {
     id: 19,
     chatId: 3,
-    date: "Sun Feb 12 2022 07:14:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 4,
     receiverId: 1,
     content: utilService.getRandomSentence(),
@@ -376,7 +368,7 @@ const msgs = [
   {
     id: 20,
     chatId: 3,
-    date: "Sun Feb 28 2022 13:00:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 1,
     receiverId: 4,
     content: utilService.getRandomSentence(),
@@ -384,7 +376,7 @@ const msgs = [
   {
     id: 21,
     chatId: 3,
-    date: "Sun Feb 28 2022 13:03:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 4,
     receiverId: 1,
     content: utilService.getRandomSentence(),
@@ -392,7 +384,7 @@ const msgs = [
   {
     id: 22,
     chatId: 3,
-    date: "Sun Feb 28 2022 13:11:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 1,
     receiverId: 4,
     content: utilService.getRandomSentence(),
@@ -400,7 +392,7 @@ const msgs = [
   {
     id: 23,
     chatId: 3,
-    date: "Sun Feb 28 2022 13:12:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 1,
     receiverId: 4,
     content: utilService.getRandomSentence(),
@@ -408,7 +400,7 @@ const msgs = [
   {
     id: 24,
     chatId: 4,
-    date: "Sun Feb 27 2022 22:29:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 5,
     receiverId: 1,
     content: utilService.getRandomSentence(),
@@ -416,7 +408,7 @@ const msgs = [
   {
     id: 25,
     chatId: 4,
-    date: "Sun Feb 27 2022 22:33:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 1,
     receiverId: 5,
     content: utilService.getRandomSentence(),
@@ -424,7 +416,7 @@ const msgs = [
   {
     id: 26,
     chatId: 4,
-    date: "Sun Feb 27 2022 22:36:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 5,
     receiverId: 1,
     content: utilService.getRandomSentence(),
@@ -432,7 +424,7 @@ const msgs = [
   {
     id: 27,
     chatId: 4,
-    date: "Sun Feb 27 2022 23:44:30 GMT+0200 (Israel Standard Time)",
+    timeStamp: 1646038523326,
     senderId: 1,
     receiverId: 5,
     content: utilService.getRandomSentence(),
@@ -440,7 +432,7 @@ const msgs = [
   {
     id: 28,
     chatId: 4,
-    date: "Sun Feb 28 2022 23:44:30 GMT+0200 (Israel Standard Time)",
+    date: 1646038523326,
     senderId: 5,
     receiverId: 1,
     content: utilService.getRandomSentence(),
@@ -448,7 +440,7 @@ const msgs = [
   {
     id: 29,
     chatId: 4,
-    date: "Sun Feb 28 2022 23:45:30 GMT+0200 (Israel Standard Time)",
+    date: 1646038523326,
     senderId: 1,
     receiverId: 5,
     content: utilService.getRandomSentence(),

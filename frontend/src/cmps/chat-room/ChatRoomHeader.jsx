@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineArrowLeft, AiOutlineSearch } from "react-icons/ai";
 import { FaVideo } from "react-icons/fa";
 import { HiPhone } from "react-icons/hi";
+import { useSelector } from "react-redux";
+import { useState } from "react";
+import { chatService } from "../../services/chatService";
 
 function ChatRoomHeader({ toggleMobileChatRoom }) {
+  const [currChat, setCurrChat] = useState(null);
+  const {currentChatId} = useSelector((state) => state.chatReducer);
+
+  useEffect(async () => {
+    const chat = await chatService.getChatById(currentChatId);
+    console.log({ currentChatId });
+    console.log({ chat });
+    setCurrChat(chat);
+  }, [currentChatId]);
+
+  if (!currChat) return <div>Loading...</div>;//if we dont have currChatId the ChatRoom cmp will not be shown so its just for now .
   return (
     <header className="header flex space-between">
       <div className="chat-info flex align-center">
@@ -15,14 +29,10 @@ function ChatRoomHeader({ toggleMobileChatRoom }) {
           <AiOutlineArrowLeft />
         </div>
         <div className="avatar-container">
-          <img
-            src="https://res.cloudinary.com/nofar/image/upload/v1610702495/ygxow9dsfc0ai2oliwpf.jpg"
-            alt=""
-            className="avatar"
-          />
+          <img src={currChat.thumbnail} className="avatar" />
         </div>
         <div className="title">
-          <p>Chat Title</p>
+          <p>{currChat.name}</p>
         </div>
       </div>
       <div className="chat-icons flex align-center">
@@ -35,7 +45,6 @@ function ChatRoomHeader({ toggleMobileChatRoom }) {
         <div className="icon-wrapper mobile-only flex center">
           <FaVideo />
         </div>
-
         <div className="icon-wrapper  flex center">
           <BsThreeDotsVertical />
         </div>

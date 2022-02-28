@@ -5,6 +5,7 @@ export const chatService = {
   getChatMessages,
   getChats,
   postMessage,
+  getChatById,
 };
 
 async function getChats() {
@@ -22,7 +23,7 @@ async function getChats() {
 
 async function getChatMessages(currChatId) {
   try {
-    const messages = await storageService.load("MESSAGES");
+    let messages = await storageService.load("MESSAGES");
     if (!messages?.length) {
       messages = data.msgs;
     }
@@ -38,9 +39,17 @@ async function postMessage(msg) {
   try {
     const messages = await storageService.load("MESSAGES");
     messages.push(msg);
-    await storageService.save("MESSAGES",messages);
+    await storageService.save("MESSAGES", messages);
     return Promise.resolve();
   } catch (error) {
     console.log(error);
+  }
+}
+async function getChatById(currentChatId){
+  try {
+    const chats= await getChats()
+     return chats.find(chat=>chat.id===currentChatId)
+  } catch (error) {
+    
   }
 }

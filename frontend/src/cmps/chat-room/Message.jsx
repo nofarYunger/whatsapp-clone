@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+import { format, toDate } from "date-fns";
 import React from "react";
 import { BiCheckDouble, BiCheck } from "react-icons/bi";
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -29,7 +29,8 @@ function Message({ msg }) {
               <BiCheckDouble />
             </span>
           )}
-          <span>{format(msg.date, "kk:mm")}</span>
+
+          <span>{format(msg.timeStamp, "kk:mm")}</span>
           <div className="options-btn">
             <MdKeyboardArrowDown />
           </div>

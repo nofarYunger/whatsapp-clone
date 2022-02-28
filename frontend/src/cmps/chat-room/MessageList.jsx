@@ -2,6 +2,7 @@ import React from "react";
 import Message from "./Message";
 
 function MessageList({ msgs }) {
+  console.log("Message list", msgs);
   return (
     <section className="message-list">
       {msgs &&
