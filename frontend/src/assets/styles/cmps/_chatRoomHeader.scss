@@ -8,6 +8,7 @@
 
 .avatar-container {
     padding: 0 15px 0 0;
+    overflow: hidden;
 }
 .title p {
     @include trim;
@@ -16,6 +17,7 @@
 .chat-info,
 .title {
     flex-grow: 1;
+    overflow: hidden;
 }
 .chat-icons,
 .avatar-container {

@@ -30,6 +30,7 @@
     justify-content: center;
     min-width: 0;
     height: 100%;
+    @media #{$breakpoint-mobile}{border-top: unset;}
 }
 .last-msg-timestamp {
     color: $txt-grey;

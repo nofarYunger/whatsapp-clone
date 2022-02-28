@@ -34,6 +34,7 @@ function Message({ msg }) {
           <div className="options-btn">
             <MdKeyboardArrowDown />
           </div>
+        
         </div>
       </div>
     </div>

@@ -7,9 +7,9 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 import { chatService } from "../../services/chatService";
 
-function ChatRoomHeader({ toggleMobileChatRoom }) {
+function ChatRoomHeader({ closeMobileChatRoom }) {
   const [currChat, setCurrChat] = useState(null);
-  const {currentChatId} = useSelector((state) => state.chatReducer);
+  const { currentChatId } = useSelector((state) => state.chatReducer);
 
   useEffect(async () => {
     const chat = await chatService.getChatById(currentChatId);
@@ -18,13 +18,13 @@ function ChatRoomHeader({ toggleMobileChatRoom }) {
     setCurrChat(chat);
   }, [currentChatId]);
 
-  if (!currChat) return <div>Loading...</div>;//if we dont have currChatId the ChatRoom cmp will not be shown so its just for now .
+  if (!currChat) return <div className="header"></div>; //if we dont have currChatId the ChatRoom cmp will not be shown so its just for now .
   return (
     <header className="header flex space-between">
       <div className="chat-info flex align-center">
         <div
           className="icon-wrapper mobile-only go-back"
-          onClick={toggleMobileChatRoom}
+          onClick={closeMobileChatRoom}
         >
           <AiOutlineArrowLeft />
         </div>

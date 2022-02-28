@@ -26,9 +26,9 @@
 .message-container {
     color: $txt-primary;
     border-radius: 8px;
-    padding: 6px 7px 8px 9px;
     box-shadow: 0 1px 0.5px $shadow-light;
     position: relative;
+    padding-bottom: 8px;
 
     &.message-in {
         border-top-left-radius: 0;
@@ -47,10 +47,16 @@
         @media #{$breakpoint-mobile} {
             margin-left: 20%;
         }
+        span {
+            position: relative;
+            top: 10px;
+        }
     }
 
     .message {
+        padding: 6px 7px 0px 9px;
         position: relative;
+
         cursor: pointer;
         user-select: text;
         width: fit-content;
@@ -105,7 +111,7 @@
         top: 3px;
         right: 5px;
         pointer-events: none;
-        background: transparent;
+        // background-color: transparent;
         transform: translateX(10px);
         transition: all 0.2s ease-in-out;
         svg {
@@ -121,12 +127,12 @@
         cursor: pointer;
         pointer-events: unset;
     }
-    &.message-out &:hover .options-btn {
-        background: $msg-green;
+    &.message-out .options-btn {
+        background-color: $msg-green;
         box-shadow: 0 1px 12px 1px $msg-green;
     }
-    &.message-in &:hover .options-btn {
-        background: $bg-white;
+    &.message-in .options-btn {
+        background-color: $bg-white;
         box-shadow: 0 1px 12px 1px $bg-white;
     }
 }
