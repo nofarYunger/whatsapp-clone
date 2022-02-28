@@ -22,7 +22,7 @@ function ChatListHeader() {
         <div className="icon-wrapper desktop-only flex center">
           <FaCircleNotch />
         </div>
-        <div className="icon-wrapper desktop-only flex center">
+        <div className="icon-wrapper msg desktop-only flex center">
           <BsFillChatLeftTextFill />
         </div>
         <div className="icon-wrapper mobile-only flex center">

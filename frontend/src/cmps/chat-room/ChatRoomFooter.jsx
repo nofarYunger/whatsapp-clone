@@ -5,21 +5,23 @@ import { MdSend } from "react-icons/md";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { chatService } from "../../services/chatService";
+import Attachments from "./Attachments";
 
 function ChatRoomFooter({ msgs, setMsgs }) {
   const [isFocus, setIsFocus] = useState(false);
   const [msgContent, setMsgContent] = useState("");
   const { currentChatId } = useSelector((state) => state.chatReducer);
   const [isSending, setIsSending] = useState(false);
+  const [isAttachOpen, setIsAttachOpen] = useState(false);
 
   const onSubmitNewMsg = async () => {
     setIsSending(true);
     const msg = {
       chatId: currentChatId,
-      senderId: '1',
+      senderId: "1",
       receiverId: currentChatId,
       content: msgContent,
-      messageType: 'txt',
+      messageType: "txt",
       timeStamp: Date.now(),
     };
     setMsgs((prevMsgs) => {
@@ -44,8 +46,12 @@ function ChatRoomFooter({ msgs, setMsgs }) {
         <div className="icon-wrapper">
           <FaRegGrin />
         </div>
-        <div className="icon-wrapper">
+        <div
+          className="icon-wrapper attachment"
+          onClick={() => setIsAttachOpen((prevState) => !prevState)}
+        >
           <FiPaperclip />
+          <Attachments isAttachOpen={isAttachOpen} />
         </div>
         <div className="chat-input-wrapper">
           <input

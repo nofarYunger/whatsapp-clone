@@ -31,9 +31,54 @@
         overflow-y: scroll;
         overflow-x: hidden;
         text-overflow: clip;
-    
     }
 }
 .footer-content .icon-wrapper {
     flex: none;
+}
+
+// -----------------------------------ATTACHMENTS------------------------------
+.icon-wrapper.attachment {
+    position: relative;
+}
+
+.attachment-list {
+    padding: 0 10px 7px;
+    position: absolute;
+    bottom: 50px;
+    left: -15px;
+
+    .attach-btn {
+        margin-top: 15px;
+        position: relative;
+        flex: none;
+        opacity: 0;
+        transform-origin: top center;
+        transform: scale(0);
+        transition: all 0.5s ease;
+    }
+    &.open .attach-btn {
+        opacity: 1;
+        transform-origin: bottom;
+        transform: scale(1);
+    }
+    .attach-btn:nth-of-type(5) {
+        transition-delay: 0.05s;
+    }
+    .attach-btn:nth-of-type(4) {
+        transition-delay: 0.1s;
+    }
+    .attach-btn:nth-of-type(3) {
+        transition-delay: 0.15s;
+    }
+    .attach-btn:nth-of-type(2) {
+        transition-delay: 0.2s;
+    }
+    .attach-btn:first-of-type {
+        transition-delay: 0.25s;
+    }
+    .attach-btn svg {
+        width: 53px;
+        height: 53px;
+    }
 }

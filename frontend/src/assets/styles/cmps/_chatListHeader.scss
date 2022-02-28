@@ -5,6 +5,10 @@
 .icon-wrapper {
     padding: 8px;
     cursor: pointer;
+    &.msg svg{
+width: 20px;
+height: 20px;
+    }
 }
 .header .icon-wrapper:active {
     background-color: $btn-focus;
