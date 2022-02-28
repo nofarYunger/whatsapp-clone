@@ -27,6 +27,11 @@
         background-color: transparent;
         border: none;
         outline: none;
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        text-overflow: clip;
+    
     }
 }
 .footer-content .icon-wrapper {

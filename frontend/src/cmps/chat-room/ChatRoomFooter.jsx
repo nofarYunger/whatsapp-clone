@@ -3,9 +3,39 @@ import { FaRegGrin } from "react-icons/fa";
 import { FiPaperclip } from "react-icons/fi";
 import { MdSend } from "react-icons/md";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { chatService } from "../../services/chatService";
 
-function ChatRoomFooter() {
+function ChatRoomFooter({ msgs, setMsgs }) {
   const [isFocus, setIsFocus] = useState(false);
+  const [msgContent, setMsgContent] = useState("");
+  const { currentChatId } = useSelector((state) => state.chatReducer);
+  const [isSending, setIsSending] = useState(false);
+
+  const onSubmitNewMsg = async () => {
+    setIsSending(true);
+    const msg = {
+      chatId: currentChatId,
+      senderId: '1',
+      receiverId: currentChatId,
+      content: msgContent,
+      timeStamp: Date.now(),
+    };
+    setMsgs((prevMsgs) => {
+      return [...prevMsgs, msg];
+    });
+    try {
+      await chatService.postMessage(msg);
+      setIsSending(false);
+      setMsgContent("");
+    } catch {}
+  };
+
+  const detectEnterPress = (e) => {
+    if (e.key === "Enter" || e.keyCode === 13) {
+      onSubmitNewMsg();
+    }
+  };
 
   return (
     <footer className="chat-room-footer">
@@ -24,9 +54,15 @@ function ChatRoomFooter() {
             type="text"
             placeholder="Type a message"
             className="chat-input"
+            value={msgContent}
+            onChange={(e) => setMsgContent(e.target.value)}
+            onSubmit={onSubmitNewMsg}
+            onKeyDown={detectEnterPress}
           />
         </div>
-        <div className="icon-wrapper">{isFocus ? <MdSend /> : <IoMdMic />}</div>
+        <div onClick={onSubmitNewMsg} className="icon-wrapper">
+          {isFocus ? <MdSend /> : <IoMdMic />}
+        </div>
       </div>
     </footer>
   );

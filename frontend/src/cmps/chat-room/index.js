@@ -1,5 +1,4 @@
 export { default as ChatRoom } from "./ChatRoom";
-export { default as ChatRoomContent } from "./ChatRoomContent";
 export { default as ChatRoomFooter } from "./ChatRoomFooter";
 export { default as ChatRoomHeader } from "./ChatRoomHeader";
 export { default as Message } from "./Message";

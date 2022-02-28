@@ -9,14 +9,9 @@ function ChatListContainer() {
   const [isLoading, setIsLoading] = useState(false);
 
   const query = async () => {
-    {
-      console.log(filterBy);
-    }
-
     setIsLoading(true);
     const chats = await chatService.getChats(filterBy);
     setChatsToShow(chats);
-    console.log(chatsToShow);
     setIsLoading(false);
   };
 

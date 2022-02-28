@@ -1,5 +1,6 @@
 import { data } from "./dummyData";
 import { storageService } from "./localService";
+import { utilService } from "./util";
 
 export const chatService = {
   getChatMessages,
@@ -14,6 +15,7 @@ async function getChats(filterBy) {
     let chats = await storageService.load("CHATS");
     if (!chats?.length) {
       chats = data.chats;
+      await storageService.save("CHATS", chats);
     }
     //filtering chats
     const filterRegex = new RegExp(filterBy, "i");
@@ -30,6 +32,7 @@ async function getChatMessages(currChatId) {
     let messages = await storageService.load("MESSAGES");
     if (!messages?.length) {
       messages = data.msgs;
+      await storageService.save("MESSAGES", messages);
     }
     const msgs = await messages.filter((msg) => msg.chatId === currChatId);
     return Promise.resolve(msgs);
@@ -39,19 +42,24 @@ async function getChatMessages(currChatId) {
 }
 
 async function postMessage(msg) {
-  msg.date = new Date();
+  msg.id = utilService.makeId();
+  console.log({msg});
   try {
     const messages = await storageService.load("MESSAGES");
     messages.push(msg);
+    console.log({messages});
     await storageService.save("MESSAGES", messages);
     return Promise.resolve();
   } catch (error) {
     console.log(error);
+    
   }
 }
 async function getChatById(currentChatId) {
   try {
     const chats = await getChats();
     return chats.find((chat) => chat.id === currentChatId);
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
 }

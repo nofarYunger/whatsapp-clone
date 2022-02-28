@@ -3,7 +3,7 @@ import React from "react";
 import { BiCheckDouble, BiCheck } from "react-icons/bi";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-const user = { title: "nofar", id: 1 };
+const user = { title: "nofar", id: '1' };
 
 function Message({ msg }) {
   const isSender = () => {
