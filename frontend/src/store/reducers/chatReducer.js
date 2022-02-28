@@ -1,8 +1,7 @@
 const initialState = {
   currentChatId: null,
   currentChatType: "private", //at the moment supporting only direct msgs..
-  filterBy: "",
-  chatsToShow: [],
+  
 };
 
 export function chatReducer(state = initialState, action) {

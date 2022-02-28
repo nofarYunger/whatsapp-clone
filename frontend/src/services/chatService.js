@@ -8,14 +8,18 @@ export const chatService = {
   getChatById,
 };
 
-async function getChats() {
+async function getChats(filterBy) {
+  console.log({ filterBy });
   try {
     let chats = await storageService.load("CHATS");
     if (!chats?.length) {
       chats = data.chats;
     }
+    //filtering chats
+    const filterRegex = new RegExp(filterBy, "i");
+    const chatsToShow = chats.filter((chat) => filterRegex.test(chat.name));
 
-    return Promise.resolve(chats);
+    return Promise.resolve(chatsToShow);
   } catch (error) {
     console.log(error); //todo: address errors and put a message to inform the users
   }
@@ -45,11 +49,9 @@ async function postMessage(msg) {
     console.log(error);
   }
 }
-async function getChatById(currentChatId){
+async function getChatById(currentChatId) {
   try {
-    const chats= await getChats()
-     return chats.find(chat=>chat.id===currentChatId)
-  } catch (error) {
-    
-  }
+    const chats = await getChats();
+    return chats.find((chat) => chat.id === currentChatId);
+  } catch (error) {}
 }
