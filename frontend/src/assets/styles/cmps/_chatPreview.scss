@@ -7,6 +7,9 @@
     &:hover {
         background-color: $bg-hover;
     }
+    &.curr-chat {
+        background-color: $bg-grey;
+    }
 
     .avatar-wrapper {
         padding: 0 15px 0 13px;
@@ -30,7 +33,9 @@
     justify-content: center;
     min-width: 0;
     height: 100%;
-    @media #{$breakpoint-mobile}{border-top: unset;}
+    @media #{$breakpoint-mobile} {
+        border-top: unset;
+    }
 }
 .last-msg-timestamp {
     color: $txt-grey;
@@ -66,22 +71,53 @@
         @include trim;
     }
 }
-.extra-preview-icons{
+.extra-preview-icons {
+    display: flex;
     flex: none;
+    flex-direction: row;
+    transform: translateX(24px);
+    transition: all 0.24s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.unread {
+
+.chat-preview:hover {
+    .extra-preview-icons {
+        transform: translateX(0px);
+    }
+    .open-menu-btn {
+        opacity: 1;
+        cursor: pointer;
+    }
 }
+
 .open-menu-btn {
-    transform: translateX(10px);
     transition: all 0.24s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
     pointer-events: none;
     flex: none;
 }
-.chat-preview:hover {
-    .open-menu-btn {
-        transform: translateX(0px);
-        opacity: 1;
-        cursor: pointer;
+
+// -------------------------------------------- UNREAD MESSAGES------------------------------------------------
+.unread-badge {
+    color: $bg-white;
+    background-color: $primary-green;
+    border-radius: 18px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 3px;
+    line-height: 18px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-left: 8px;
+}
+.preview-content.unread {
+    .last-msg-timestamp {
+        color: $primary-green;
+        font-weight: 500;
+    }
+    .last-msg,
+    .chat-title  {
+        font-weight: 500;
     }
 }

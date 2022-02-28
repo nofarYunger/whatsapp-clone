@@ -13,8 +13,6 @@ function ChatRoomHeader({ closeMobileChatRoom }) {
 
   useEffect(async () => {
     const chat = await chatService.getChatById(currentChatId);
-    console.log({ currentChatId });
-    console.log({ chat });
     setCurrChat(chat);
   }, [currentChatId]);
 

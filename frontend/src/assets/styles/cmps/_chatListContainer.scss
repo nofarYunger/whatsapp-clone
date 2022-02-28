@@ -1,7 +1,9 @@
 .chat-list {
     overflow-y: scroll;
+    overflow-x: hidden;
     background-color: $bg-white;
 }
 .chat-list-container {
     overflow: hidden;
+    background-color: $bg-white;
 }

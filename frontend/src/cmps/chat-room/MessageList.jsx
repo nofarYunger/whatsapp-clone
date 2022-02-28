@@ -2,7 +2,6 @@ import React from "react";
 import Message from "./Message";
 
 function MessageList({ msgs }) {
-  console.log("Message list", msgs);
   return (
     <section className="chat-room-content flex col">
       <section className="message-list">

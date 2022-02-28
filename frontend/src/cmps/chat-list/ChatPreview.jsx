@@ -6,16 +6,22 @@ import { bindActionCreators } from "redux";
 import * as actions from "../../store/actions/chatAction";
 
 function ChatPreview({ chat }) {
-  const {currentChatId} = useSelector((state) => state.chatReducer);
+  const { currentChatId } = useSelector((state) => state.chatReducer);
   const dispatch = useDispatch();
   const { updCurrChat } = bindActionCreators(actions, dispatch);
+
   const isActive = () => {
-    if (chat.id === currentChatId) return true;
-    return false;
+    if (chat.id !== currentChatId) return;
+    else {
+      return true;
+    }
   };
+
   return (
     <div
-      className={`chat-preview flex align-center ${isActive ? "currChat" : ""}`}
+      className={`chat-preview flex align-center ${
+        isActive() ? "curr-chat" : ""
+      }`}
       onClick={() => updCurrChat(chat.id)}
     >
       <div className="avatar-wrapper">
@@ -23,7 +29,9 @@ function ChatPreview({ chat }) {
           <img src={chat.thumbnail} alt="Thumbnail" />
         </div>
       </div>
-      <div className="preview-content flex col ">
+      <div
+        className={`preview-content flex col ${chat.unread ? "unread" : ""}`}
+      >
         <div className="top-row flex">
           <div className="chat-title">
             <p>{chat.name}</p>
@@ -37,6 +45,9 @@ function ChatPreview({ chat }) {
             <p>{chat.lastMsg.content}</p>
           </div>
           <ul className="extra-preview-icons">
+            {chat.unread !== 0 && (
+              <li className="unread-badge">{chat.unread}</li>
+            )}
             <li className="open-menu-btn">
               <MdKeyboardArrowDown />
             </li>
