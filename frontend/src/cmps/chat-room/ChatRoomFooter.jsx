@@ -19,6 +19,7 @@ function ChatRoomFooter({ msgs, setMsgs }) {
       senderId: '1',
       receiverId: currentChatId,
       content: msgContent,
+      messageType: 'txt',
       timeStamp: Date.now(),
     };
     setMsgs((prevMsgs) => {

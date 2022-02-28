@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import UseOnClickOutside from "../../hooks/UseOnClickOutside";
 
 function OpenMenu({ options, closeMenu }) {
+  
   const menuRef = useRef(null); //todo: fix the useRef undefined bug
   UseOnClickOutside(menuRef, closeMenu);
 

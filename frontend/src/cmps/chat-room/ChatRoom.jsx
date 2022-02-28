@@ -11,7 +11,7 @@ function ChatRoom() {
   const dispatch = useDispatch();
   const { updCurrChat } = bindActionCreators(actions, dispatch);
   const { currentChatId } = useSelector((state) => state.chatReducer);
-  const [isMobileChatSeen, setIsMobileChatSeen] = useState(false);
+  const [isMobileChatSeen, setIsMobileChatSeen] = useState(true);
   const [msgs, setMsgs] = useState([]);
 
   useEffect(async () => {
@@ -20,8 +20,7 @@ function ChatRoom() {
   }, [currentChatId]);
 
   useEffect(() => {
-    if (currentChatId) setIsMobileChatSeen(true);
-    else setIsMobileChatSeen(false);
+    setIsMobileChatSeen(!!currentChatId);
   }, [currentChatId]);
 
   const closeMobileChatRoom = async () => {

@@ -117,7 +117,17 @@
         font-weight: 500;
     }
     .last-msg,
-    .chat-title  {
+    .chat-title {
         font-weight: 500;
+    }
+}
+.extra-preview-icons {
+    li svg {
+        overflow: hidden;
+        color: $icon-grey;
+    }
+    .pin svg {
+        width: 17px;
+        height: 17px;
     }
 }

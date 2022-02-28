@@ -1,0 +1,66 @@
+.intro-wrapper {
+    border-left: 1px solid #e9edef;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    background-color: $intro-bg;
+    flex-grow: 1;
+
+    width: 100%;
+    height: 100%;
+    color: #41525d;
+
+    .intro-content {
+        margin-top: -20px;
+        text-align: center;
+        width: 80%;
+        max-width: 560px;
+    }
+
+    .intro-title {
+        margin-top: 28px;
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    .more-txt {
+        margin-top: 34px;
+        font-size: 14px;
+        line-height: 20px;
+        color: $txt-grey;
+        position: relative;
+        svg {
+            position: relative;
+            bottom: -5px;
+            color: $icon-grey;
+            width: 20px;
+            height: 18px;
+        }
+    }
+    .subtitle {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 20px;
+        padding-bottom: 34px;
+        border-bottom: 1px solid $shadow-light;
+        color: $txt-grey;
+    }
+    a {
+        color: $whatsapp-teal;
+        text-decoration: none;
+        &:active,
+        &:visited {
+            text-decoration: none;
+            color: $whatsapp-teal;
+        }
+    }
+    .img-connection {
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        border-radius: 50%;
+        transform-origin: center;
+        width: 250px;
+        height: 250px;
+        background-image: url("../../images/intro-connection-light.jpg");
+    }
+}

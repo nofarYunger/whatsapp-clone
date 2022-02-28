@@ -1,9 +1,9 @@
 import { format, toDate } from "date-fns";
 import React from "react";
-import { BiCheckDouble, BiCheck } from "react-icons/bi";
+import { BiCheckDouble } from "react-icons/bi";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-const user = { title: "nofar", id: '1' };
+const user = { title: "nofar", id: "1" };
 
 function Message({ msg }) {
   const isSender = () => {
@@ -22,8 +22,10 @@ function Message({ msg }) {
           isSender() ? "message-out" : "message-in"
         }`}
       >
-        <div className="message">
-          <p>{msg.content}</p>
+        <div className={`message ${msg.messageType}`} >
+          {msg.messageType === "txt" && <p>{msg.content}</p>}
+          {msg.messageType === "img" && <img src={msg.content} />}
+
           {isSender() && (
             <span>
               <BiCheckDouble />
@@ -34,7 +36,6 @@ function Message({ msg }) {
           <div className="options-btn">
             <MdKeyboardArrowDown />
           </div>
-        
         </div>
       </div>
     </div>

@@ -19,11 +19,13 @@ const chats = [
     phone_number: "+2348123456789",
     whatsapp_name: "karen",
     unread: 1,
+    online:false,
     group: false,
     pinned: false,
     typing: true,
     lastMsg: {
       chatId: "1",
+      messageType: "txt",
       timeStamp: 1646065058483,
       senderId: "1",
       receiverId: "1",
@@ -37,11 +39,13 @@ const chats = [
     phone_number: "+2348123456789",
     whatsapp_name: "Beyonce",
     unread: 3,
+    online:true,
     group: false,
     pinned: true,
     typing: false,
     lastMsg: {
       chatId: "2",
+      messageType: "txt",
       timeStamp: 1646065058483,
       senderId: "1",
       receiverId: "2",
@@ -55,11 +59,13 @@ const chats = [
     phone_number: "+2348123456789",
     whatsapp_name: "bobi",
     unread: 0,
+    online:false,
     group: false,
     pinned: false,
     typing: false,
     lastMsg: {
       chatId: "3",
+      messageType: "txt",
       timeStamp: 1646065058483,
       senderId: "3",
       receiverId: "1",
@@ -73,11 +79,13 @@ const chats = [
     phone_number: "+2348123456789",
     whatsapp_name: "Mayush",
     unread: 0,
+    online:true,
     group: false,
     pinned: false,
-    typing: false,
+    typing: true,
     lastMsg: {
       chatId: "4",
+      messageType: "txt",
       timeStamp: 1646065058483,
       senderId: "4",
       receiverId: "1",
@@ -91,11 +99,13 @@ const chats = [
     phone_number: "+2348123456789",
     whatsapp_name: "Josh",
     unread: 0,
+    online:true,
     group: false,
     pinned: false,
     typing: false,
     lastMsg: {
       chatId: "5",
+      messageType: "txt",
       timeStamp: 1646065058483,
       senderId: "1 ",
       receiverId: "5",
@@ -109,11 +119,13 @@ const chats = [
     phone_number: "+2348123456789",
     whatsapp_name: "my bea",
     unread: 0,
+    online:false,
     group: false,
     pinned: false,
     typing: false,
     lastMsg: {
       chatId: "6",
+      messageType: "txt",
       timeStamp: 1646065058483,
       senderId: "6",
       receiverId: "1",
@@ -127,11 +139,13 @@ const chats = [
     phone_number: "+2348123456789",
     whatsapp_name: "rachel green",
     unread: 5,
+    online:false,
     group: false,
     pinned: false,
     typing: true,
     lastMsg: {
       chatId: "7",
+      messageType: "txt",
       timeStamp: 1646065058483,
       senderId: "7",
       receiverId: "1",
@@ -145,11 +159,13 @@ const chats = [
     phone_number: "+2348123456789",
     whatsapp_name: "lily",
     unread: 0,
+    online:false,
     group: false,
     pinned: false,
     typing: false,
     lastMsg: {
       chatId: "8",
+      messageType: "txt",
       timeStamp: 1646065058483,
       senderId: "1",
       receiverId: "8",
@@ -163,11 +179,13 @@ const chats = [
     phone_number: "+2348123456789",
     whatsapp_name: "Josh",
     unread: 0,
+    online:false,
     group: false,
     pinned: false,
     typing: false,
     lastMsg: {
       chatId: "9",
+      messageType: "txt",
       timeStamp: 1646065058483,
       senderId: "9",
       receiverId: "1",
@@ -181,11 +199,13 @@ const chats = [
     phone_number: "+2348123456789",
     whatsapp_name: "Irit",
     unread: 1,
+    online:false,
     group: false,
     pinned: false,
     typing: true,
     lastMsg: {
       chatId: "10",
+      messageType: "txt",
       timeStamp: 1646065058483,
       senderId: "1",
       receiverId: "10",
@@ -199,11 +219,13 @@ const chats = [
     phone_number: "+2348123456789",
     whatsapp_name: "jake",
     unread: 0,
+    online:false,
     group: false,
     pinned: false,
     typing: false,
     lastMsg: {
       chatId: "11",
+      messageType: "txt",
       timeStamp: 1646065058483,
       senderId: "11",
       receiverId: "1",
@@ -216,6 +238,7 @@ const msgs = [
   {
     id: "1",
     chatId: "1",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "1",
     receiverId: "2",
@@ -224,6 +247,7 @@ const msgs = [
   {
     id: "2",
     chatId: "1",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "1",
     receiverId: "2",
@@ -232,6 +256,7 @@ const msgs = [
   {
     id: "3",
     chatId: "1",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "2",
     receiverId: "1",
@@ -240,6 +265,7 @@ const msgs = [
   {
     id: "4",
     chatId: "1",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "1",
     receiverId: "2",
@@ -248,6 +274,7 @@ const msgs = [
   {
     id: "5",
     chatId: "1",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "2",
     receiverId: "1",
@@ -256,6 +283,7 @@ const msgs = [
   {
     id: "6",
     chatId: "1",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "1",
     receiverId: "2",
@@ -264,6 +292,7 @@ const msgs = [
   {
     id: "7",
     chatId: "1",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "1",
     receiverId: "2",
@@ -272,6 +301,7 @@ const msgs = [
   {
     id: "8",
     chatId: "1",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "1",
     receiverId: "2",
@@ -280,6 +310,7 @@ const msgs = [
   {
     id: "9",
     chatId: "1",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "1",
     receiverId: "2",
@@ -288,6 +319,7 @@ const msgs = [
   {
     id: "10",
     chatId: "1",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "1",
     receiverId: "2",
@@ -296,6 +328,7 @@ const msgs = [
   {
     id: "11",
     chatId: "2",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "3",
     receiverId: "1",
@@ -304,6 +337,7 @@ const msgs = [
   {
     id: "12",
     chatId: "2",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "3",
     receiverId: "1",
@@ -312,6 +346,7 @@ const msgs = [
   {
     id: "13",
     chatId: "2",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "3",
     receiverId: "1",
@@ -320,6 +355,7 @@ const msgs = [
   {
     id: "14",
     chatId: "2",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "1",
     receiverId: "3",
@@ -328,6 +364,7 @@ const msgs = [
   {
     id: "15",
     chatId: "2",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "3",
     receiverId: "1",
@@ -336,6 +373,7 @@ const msgs = [
   {
     id: "16",
     chatId: "3",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "4",
     receiverId: "1",
@@ -344,6 +382,7 @@ const msgs = [
   {
     id: "17",
     chatId: "3",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "4",
     receiverId: "1",
@@ -352,6 +391,7 @@ const msgs = [
   {
     id: "18",
     chatId: "3",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "1",
     receiverId: "4",
@@ -360,6 +400,7 @@ const msgs = [
   {
     id: "19",
     chatId: "3",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "4",
     receiverId: "1",
@@ -368,6 +409,7 @@ const msgs = [
   {
     id: "20",
     chatId: "3",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "1",
     receiverId: "4",
@@ -376,6 +418,7 @@ const msgs = [
   {
     id: "21",
     chatId: "3",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "4",
     receiverId: "1",
@@ -384,6 +427,7 @@ const msgs = [
   {
     id: "22",
     chatId: "3",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "1",
     receiverId: "4",
@@ -392,6 +436,7 @@ const msgs = [
   {
     id: "23",
     chatId: "3",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "1",
     receiverId: "4",
@@ -400,6 +445,7 @@ const msgs = [
   {
     id: "24",
     chatId: "4",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "5",
     receiverId: "1",
@@ -408,6 +454,7 @@ const msgs = [
   {
     id: "25",
     chatId: "4",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "1",
     receiverId: "5",
@@ -416,6 +463,7 @@ const msgs = [
   {
     id: "26",
     chatId: "4",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "5",
     receiverId: "1",
@@ -424,6 +472,7 @@ const msgs = [
   {
     id: "27",
     chatId: "4",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "1",
     receiverId: "5",
@@ -432,6 +481,7 @@ const msgs = [
   {
     id: "28",
     chatId: "4",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: "5",
     receiverId: "1",
@@ -440,10 +490,21 @@ const msgs = [
   {
     id: "29",
     chatId: "4",
+    messageType: "txt",
     timeStamp: 1646038523326,
     senderId: 1,
     receiverId: "5",
     content: utilService.getRandomSentence(),
+  },
+  {
+    id: "30",
+    chatId: "4",
+    messageType: "img",
+    timeStamp: 1646038523326, 
+    senderId: 1,
+    receiverId: "5",
+    content:
+      "https://res.cloudinary.com/nofar/image/upload/v1622110851/qvgxvymdcubaefgbdobq.jpg",
   },
 ];
 export const data = {

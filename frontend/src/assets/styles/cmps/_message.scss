@@ -135,4 +135,13 @@
         background-color: $bg-white;
         box-shadow: 0 1px 12px 1px $bg-white;
     }
+    .message.img {
+        .options-btn {
+            background-color: transparent;
+            box-shadow: none;
+            svg{
+                color: $bg-white;
+            }
+        }
+    }
 }
