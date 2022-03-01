@@ -46,7 +46,7 @@ const chats = [
     lastMsg: {
       chatId: "1",
       messageType: "txt",
-      timeStamp: 1646065058483,
+      timeStamp: 1646060058483,
       senderId: "1",
       receiverId: "1",
       content: utilService.getRandomSentence(),
@@ -67,7 +67,7 @@ const chats = [
     lastMsg: {
       chatId: "3",
       messageType: "txt",
-      timeStamp: 1646065058483,
+      timeStamp: 1646065008483,
       senderId: "3",
       receiverId: "1",
       content: utilService.getRandomSentence(),
@@ -87,7 +87,7 @@ const chats = [
     lastMsg: {
       chatId: "4",
       messageType: "txt",
-      timeStamp: 1646065056483,
+      timeStamp: 1640065056483,
       senderId: "4",
       receiverId: "1",
       content: utilService.getRandomSentence(),
@@ -107,7 +107,7 @@ const chats = [
     lastMsg: {
       chatId: "5",
       messageType: "txt",
-      timeStamp: 1646065045483,
+      timeStamp: 1640065045483,
       senderId: "1 ",
       receiverId: "5",
       content: utilService.getRandomSentence(),
@@ -127,7 +127,7 @@ const chats = [
     lastMsg: {
       chatId: "6",
       messageType: "txt",
-      timeStamp: 1646065052483,
+      timeStamp: 1640065252483,
       senderId: "6",
       receiverId: "1",
       content: utilService.getRandomSentence(),
@@ -167,7 +167,7 @@ const chats = [
     lastMsg: {
       chatId: "8",
       messageType: "txt",
-      timeStamp: 1646055058483,
+      timeStamp: 1646055078413,
       senderId: "1",
       receiverId: "8",
       content: utilService.getRandomSentence(),
@@ -187,7 +187,7 @@ const chats = [
     lastMsg: {
       chatId: "9",
       messageType: "txt",
-      timeStamp: 1646065058483,
+      timeStamp: 1646060058483,
       senderId: "9",
       receiverId: "1",
       content: utilService.getRandomSentence(),
@@ -207,7 +207,7 @@ const chats = [
     lastMsg: {
       chatId: "10",
       messageType: "txt",
-      timeStamp: 1646065058483,
+      timeStamp: 1646265058483,
       senderId: "1",
       receiverId: "10",
       content: utilService.getRandomSentence(),
