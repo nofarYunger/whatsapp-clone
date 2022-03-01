@@ -31,3 +31,17 @@
         height: 12px;
     }
 }
+
+.date-wrapper {
+    .date-modal {
+        padding: 5px 12px 6px;
+        text-align: center;
+        background-color: $bg-white;
+        border-radius: 7.5px;
+        box-shadow: 0 1px 0.5px rgba(rgba($shadow, 0.13), 0.13);
+        max-width: 100% !important;
+        font-size: 12.5px;
+        line-height: 19px;
+        color: $icon-clr;
+    }
+}

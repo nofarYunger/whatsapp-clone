@@ -34,9 +34,9 @@ async function getChatMessages(currChatId) {
       messages = data.msgs;
       await storageService.save("MESSAGES", messages);
     }
-
-    const msgs = await messages.filter((msg) => msg.chatId === currChatId);
+    
     _seenUnreadMsgs(currChatId);
+    const msgs = await messages.filter((msg) => msg.chatId === currChatId);
     return Promise.resolve(msgs);   
   } catch (error) {
     console.log(error);
