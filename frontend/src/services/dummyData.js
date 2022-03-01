@@ -143,7 +143,7 @@ const chats = [
     online: false,
     group: false,
     pinned: false,
-    typing: true,
+    typing: false,
     lastMsg: {
       chatId: "7",
       messageType: "txt",
