@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/nofarYunger/whatsapp-clone/static/css/main.f95b54d5.chunk.css",
+    "main.js": "/nofarYunger/whatsapp-clone/static/js/main.7fb930b7.chunk.js",
+    "main.js.map": "/nofarYunger/whatsapp-clone/static/js/main.7fb930b7.chunk.js.map",
+    "runtime-main.js": "/nofarYunger/whatsapp-clone/static/js/runtime-main.47743dbc.js",
+    "runtime-main.js.map": "/nofarYunger/whatsapp-clone/static/js/runtime-main.47743dbc.js.map",
+    "static/js/2.50ec28ba.chunk.js": "/nofarYunger/whatsapp-clone/static/js/2.50ec28ba.chunk.js",
+    "static/js/2.50ec28ba.chunk.js.map": "/nofarYunger/whatsapp-clone/static/js/2.50ec28ba.chunk.js.map",
+    "static/js/3.7499de19.chunk.js": "/nofarYunger/whatsapp-clone/static/js/3.7499de19.chunk.js",
+    "static/js/3.7499de19.chunk.js.map": "/nofarYunger/whatsapp-clone/static/js/3.7499de19.chunk.js.map",
+    "index.html": "/nofarYunger/whatsapp-clone/index.html",
+    "static/css/main.f95b54d5.chunk.css.map": "/nofarYunger/whatsapp-clone/static/css/main.f95b54d5.chunk.css.map",
+    "static/js/2.50ec28ba.chunk.js.LICENSE.txt": "/nofarYunger/whatsapp-clone/static/js/2.50ec28ba.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "/nofarYunger/whatsapp-clone/static/media/intro-connection-light.5690d473.jpg",
+    "static/media/man1.56994c22.jpg": "/nofarYunger/whatsapp-clone/static/media/man1.56994c22.jpg",
+    "static/media/man2.93abd546.jpg": "/nofarYunger/whatsapp-clone/static/media/man2.93abd546.jpg",
+    "static/media/man3.51fcfba2.jpg": "/nofarYunger/whatsapp-clone/static/media/man3.51fcfba2.jpg",
+    "static/media/man4.637b95d5.jpg": "/nofarYunger/whatsapp-clone/static/media/man4.637b95d5.jpg",
+    "static/media/man5.25d21f7d.jpg": "/nofarYunger/whatsapp-clone/static/media/man5.25d21f7d.jpg",
+    "static/media/woman1.725070c1.jpg": "/nofarYunger/whatsapp-clone/static/media/woman1.725070c1.jpg",
+    "static/media/woman2.a95cc2d4.jpg": "/nofarYunger/whatsapp-clone/static/media/woman2.a95cc2d4.jpg",
+    "static/media/woman3.9974acb5.jpg": "/nofarYunger/whatsapp-clone/static/media/woman3.9974acb5.jpg",
+    "static/media/woman4.913491d5.jpg": "/nofarYunger/whatsapp-clone/static/media/woman4.913491d5.jpg",
+    "static/media/woman5.f41afb9e.jpg": "/nofarYunger/whatsapp-clone/static/media/woman5.f41afb9e.jpg",
+    "static/media/woman6.9e47b950.jpg": "/nofarYunger/whatsapp-clone/static/media/woman6.9e47b950.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.47743dbc.js",
+    "static/js/2.50ec28ba.chunk.js",
+    "static/css/main.f95b54d5.chunk.css",
+    "static/js/main.7fb930b7.chunk.js"
+  ]
+}
