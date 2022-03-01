@@ -37,7 +37,7 @@ async function getChatMessages(currChatId) {
 
     const msgs = await messages.filter((msg) => msg.chatId === currChatId);
     _seenUnreadMsgs(currChatId);
-    return Promise.resolve(msgs);
+    return Promise.resolve(msgs);   
   } catch (error) {
     console.log(error);
   }

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useRef } from "react";
+import {FirstMsg} from "./";
 import Message from "./Message";
 
 function MessageList({ msgs }) {
@@ -21,6 +22,7 @@ function MessageList({ msgs }) {
   return (
     <section className="chat-room-content flex col">
       <section className="message-list">
+       <FirstMsg/>
         {msgs &&
           msgs.map((msg, idx) => {
             return (

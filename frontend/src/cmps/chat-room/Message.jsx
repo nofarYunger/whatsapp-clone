@@ -12,7 +12,9 @@ function Message({ msg, isFirstMsgByUser }) {
     if (msg.senderId === user.id) return true;
     return false;
   };
-  console.log(isFirstMsg);
+
+
+  
   return (
     <div
       className={`message-wrapper flex ${
