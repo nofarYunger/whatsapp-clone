@@ -117,12 +117,9 @@
         top: 3px;
         right: 5px;
         pointer-events: none;
-        // background-color: transparent;
         transform: translateX(10px);
         transition: all 0.2s ease-in-out;
         svg {
-            width: 30px;
-            height: 30px;
             color: #8696a0;
         }
     }
@@ -140,6 +137,7 @@
     &.message-in .options-btn {
         background-color: $bg-white;
         box-shadow: 0 1px 12px 1px $bg-white;
+        border-radius: 50%;
     }
     .message.img {
         .options-btn {

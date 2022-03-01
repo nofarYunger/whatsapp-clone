@@ -1,11 +1,12 @@
-import { format, toDate } from "date-fns";
+import { format } from "date-fns";
 import React from "react";
 import { BiCheckDouble } from "react-icons/bi";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import Icon from "../util/Icon";
 
 const user = { title: "nofar", id: "1" };
 
 function Message({ msg }) {
+  
   const isSender = () => {
     if (msg.senderId === user.id) return true;
     return false;
@@ -22,7 +23,7 @@ function Message({ msg }) {
           isSender() ? "message-out" : "message-in"
         }`}
       >
-        <div className={`message ${msg.messageType}`} >
+        <div className={`message ${msg.messageType}`}>
           {msg.messageType === "txt" && <p>{msg.content}</p>}
           {msg.messageType === "img" && <img src={msg.content} />}
 
@@ -34,7 +35,7 @@ function Message({ msg }) {
 
           <span>{format(msg.timeStamp, "kk:mm")}</span>
           <div className="options-btn">
-            <MdKeyboardArrowDown />
+            <Icon id="downArrow" />
           </div>
         </div>
       </div>

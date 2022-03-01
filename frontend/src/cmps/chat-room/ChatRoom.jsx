@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
-import { ChatRoomHeader } from "./";
-import ChatRoomFooter from "./ChatRoomFooter";
+import { ChatRoomHeader,ChatRoomFooter } from "./";
 import * as actions from "../../store/actions/chatAction";
 import { chatService } from "../../services/chatService";
 import MessageList from "./MessageList";
+
+
+
 
 function ChatRoom() {
   const dispatch = useDispatch();

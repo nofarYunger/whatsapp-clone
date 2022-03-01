@@ -1,8 +1,13 @@
 import React, { useState } from "react";
-import { AiOutlineSearch } from "react-icons/ai";
-import { BsFillChatLeftTextFill, BsThreeDotsVertical } from "react-icons/bs";
-import { FaCircleNotch } from "react-icons/fa";
+import Icon from "../util/Icon";
 import OpenMenu from "../util/OpenMenu";
+
+const headerBtns = [
+  { icon: "status", label: "Status", className: "desktop-only" },
+  { icon: "chat", label: "New chat", className: "desktop-only" },
+  { icon: "search", label: "Search", className: "mobile-only" },
+  { icon: "menu", label: "Menu", onClick: true, className: "option-btn" },
+];
 
 function ChatListHeader() {
   const [isOptionOpen, setIsOptionOpen] = useState(false);
@@ -18,29 +23,32 @@ function ChatListHeader() {
           />
         </div>
       </div>
-      <div className="header-icons flex align-center ">
-        <div className="icon-wrapper desktop-only flex center">
-          <FaCircleNotch />
-        </div>
-        <div className="icon-wrapper msg desktop-only flex center">
-          <BsFillChatLeftTextFill />
-        </div>
-        <div className="icon-wrapper mobile-only flex center">
-          <AiOutlineSearch />
-        </div>
 
-        <div
-          className="icon-wrapper option-btn flex center "
-          onClick={() => setIsOptionOpen((prevState) => !prevState)}
-        >
-          <BsThreeDotsVertical />
-          <div className={`menu-wrapper ${isOptionOpen ? "open" : ""}`}>
-            <OpenMenu
-              options={options}
-              closeMenu={() => setIsOptionOpen(false)}
-            />
-          </div>
-        </div>
+      <div className="header-icons flex align-center ">
+        {headerBtns.map((btn) => {
+          return (
+            <div
+              className={`icon-wrapper flex center ${btn.className}`}
+              aria-label={btn.label}
+              key={btn.label}
+              onClick={
+                btn.onClick &&
+                (() => setIsOptionOpen((prevState) => !prevState))
+              }
+            >
+              <Icon id={btn.icon} />
+
+              {btn.icon === "menu" && ( //the popup menu
+                <div className={`menu-wrapper ${isOptionOpen ? "open" : ""}`}>
+                  <OpenMenu
+                    options={options}
+                    closeMenu={() => setIsOptionOpen(false)}
+                  />
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </header>
   );

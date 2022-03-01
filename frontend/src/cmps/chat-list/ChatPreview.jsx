@@ -1,6 +1,5 @@
 import React from "react";
-import { MdKeyboardArrowDown } from "react-icons/md";
-import { GoPin } from "react-icons/go";
+import Icon from "../util/Icon";
 import UseTimeFormat from "../../hooks/UseTimeFormat";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -47,15 +46,15 @@ function ChatPreview({ chat }) {
           </div>
           <ul className="extra-preview-icons">
             {chat.pinned && (
-              <li className="pin">
-                <GoPin />
+              <li className="pin" aria-label="Pinned">
+                <Icon id={"pinned"} />
               </li>
             )}
             {chat.unread !== 0 && (
               <li className="unread-badge">{chat.unread}</li>
             )}
-            <li className="open-menu-btn">
-              <MdKeyboardArrowDown />
+            <li className="open-menu-btn" aria-label="Menu">
+              <Icon id={"downArrow"} />
             </li>
           </ul>
         </div>

@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { AiOutlineArrowLeft, AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch } from "react-icons/ai";
 import { FaVideo } from "react-icons/fa";
 import { HiPhone } from "react-icons/hi";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import { chatService } from "../../services/chatService";
+import Icon from "../util/Icon";
 
 function ChatRoomHeader({ closeMobileChatRoom }) {
   const [currChat, setCurrChat] = useState(null);
@@ -21,10 +22,11 @@ function ChatRoomHeader({ closeMobileChatRoom }) {
     <header className="header flex space-between">
       <div className="chat-info flex align-center">
         <div
-          className="icon-wrapper mobile-only go-back"
+          className="icon-wrapper mobile-only go-back "
+          aria-label="Go back"
           onClick={closeMobileChatRoom}
         >
-          <AiOutlineArrowLeft />
+          <Icon id="back" />
         </div>
         <div className="avatar-container">
           <img src={currChat.thumbnail} className="avatar" />
@@ -44,7 +46,7 @@ function ChatRoomHeader({ closeMobileChatRoom }) {
           <FaVideo />
         </div>
         <div className="icon-wrapper  flex center">
-          <BsThreeDotsVertical />
+          <Icon id="menu" />
         </div>
       </div>
     </header>

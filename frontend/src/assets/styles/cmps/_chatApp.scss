@@ -24,9 +24,9 @@
         margin: 0 auto;
     }
 
-
     @media #{$breakpoint1} {
-        .chat-room {
+        .chat-room,
+        .intro-wrapper {
             flex: 60%;
         }
         .chat-list-container {
@@ -35,7 +35,8 @@
     }
 
     @media #{$breakpoint3} {
-        .chat-room {
+        .chat-room,
+        .intro-wrapper {
             flex: 65%;
         }
         .chat-list-container {
@@ -44,7 +45,8 @@
     }
 
     @media #{$breakpoint4} {
-        .chat-room {
+        .chat-room,
+        .intro-wrapper {
             flex: 70%;
         }
         .chat-list-container {
@@ -54,9 +56,13 @@
 
     @media #{$breakpoint-mobile} {
         .chat-room,
+        .intro-wrapper,
         .chat-list-container {
             flex: unset;
             width: 100%;
+        }
+        .intro-wrapper {
+            display: none;
         }
 
         .chat-room {
