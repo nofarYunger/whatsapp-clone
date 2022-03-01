@@ -22,7 +22,10 @@
         font-weight: 400;
         color: $txt-grey;
         font-size: 0.8rem;
+    @media #{$breakpoint-mobile} {color: $bg-white;}
+
     }
+
 }
 .chat-icons,
 .avatar-container {

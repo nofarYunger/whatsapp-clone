@@ -34,25 +34,34 @@ async function getChatMessages(currChatId) {
       messages = data.msgs;
       await storageService.save("MESSAGES", messages);
     }
+
     const msgs = await messages.filter((msg) => msg.chatId === currChatId);
+    _seenUnreadMsgs(currChatId);
     return Promise.resolve(msgs);
   } catch (error) {
     console.log(error);
   }
 }
 
+async function _seenUnreadMsgs(chatId) {
+  console.log('lalalala');
+  const chats = await getChats();
+  const currChatIdx = chats.findIndex((chat) => chat.id === chatId);
+  chats[currChatIdx].unread = 0;
+  await storageService.save("CHATS", [...chats]);
+}
+
 async function postMessage(msg) {
   msg.id = utilService.makeId();
-  console.log({msg});
+  console.log({ msg });
   try {
     const messages = await storageService.load("MESSAGES");
     messages.push(msg);
-    console.log({messages});
+    console.log({ messages });
     await storageService.save("MESSAGES", messages);
     return Promise.resolve();
   } catch (error) {
     console.log(error);
-    
   }
 }
 async function getChatById(currentChatId) {

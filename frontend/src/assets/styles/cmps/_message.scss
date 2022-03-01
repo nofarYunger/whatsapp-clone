@@ -31,7 +31,6 @@
     padding-bottom: 8px;
 
     &.message-in {
-        border-top-left-radius: 0;
         background-color: $bg-white;
         margin-right: 30%;
 
@@ -41,8 +40,11 @@
     }
     &.message-out {
         background-color: $msg-green;
-        border-top-right-radius: 0;
         margin-left: 30%;
+        // &.first-message{
+        //     background-color: rgb(119, 42, 42);
+
+        // }
 
         @media #{$breakpoint-mobile} {
             margin-left: 20%;
@@ -83,10 +85,29 @@
             height: 100%;
             object-fit: cover;
         }
+    }
 
-        //----------------------------------- talk bubble  -----------------------------------
-        // &.first-message {
-        &::before {
+    //----------------------------------- talk bubble  -----------------------------------
+
+    &.first-message {
+        &.message-in {
+            border-top-left-radius: 0;
+        }
+
+        &.message-out {
+            border-top-right-radius: 0;
+
+            .message::before {
+                left: auto;
+                right: -28px;
+                border-width: 0px 16px 16px 16px;
+                border-color: transparent;
+                border-left-color: $msg-green;
+                color: $msg-green;
+            }
+        }
+
+        .message::before {
             position: absolute;
             left: -10px;
             top: 0;
@@ -99,16 +120,6 @@
             color: $bg-white;
         }
     }
-
-    &.message-out .message::before {
-        left: auto;
-        right: -28px;
-        border-width: 0px 16px 16px 16px;
-        border-color: transparent;
-        border-left-color: $msg-green;
-        color: $msg-green;
-    }
-    // }
 
     //----------------------------------- option btn arrow ---------------------------------
     .options-btn {

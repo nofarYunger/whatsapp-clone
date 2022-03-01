@@ -3,15 +3,16 @@ import React from "react";
 import { BiCheckDouble } from "react-icons/bi";
 import Icon from "../util/Icon";
 
-const user = { title: "nofar", id: "1" };
+const user = { title: "Nofar", id: "1" };
 
-function Message({ msg }) {
-  
+function Message({ msg, isFirstMsgByUser }) {
+  const isFirstMsg = isFirstMsgByUser();
+
   const isSender = () => {
     if (msg.senderId === user.id) return true;
     return false;
   };
-
+  console.log(isFirstMsg);
   return (
     <div
       className={`message-wrapper flex ${
@@ -21,9 +22,9 @@ function Message({ msg }) {
       <div
         className={`message-container ${
           isSender() ? "message-out" : "message-in"
-        }`}
+        } ${isFirstMsg ? "first-message" : ""}`}
       >
-        <div className={`message ${msg.messageType}`}>
+        <div className={`message ${msg.messageType} `}>
           {msg.messageType === "txt" && <p>{msg.content}</p>}
           {msg.messageType === "img" && <img src={msg.content} />}
 

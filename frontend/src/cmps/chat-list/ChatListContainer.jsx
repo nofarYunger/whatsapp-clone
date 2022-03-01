@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import { chatService } from "../../services/chatService";
 import { ChatListHeader, ChatList, ChatListSearchBar } from "./";
 
@@ -7,6 +8,8 @@ function ChatListContainer() {
   const [chatsToShow, setChatsToShow] = useState([]);
   const [filterBy, setFilterBy] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const { currentChatId } = useSelector((state) => state.chatReducer);
+
 
   const query = async () => {
     setIsLoading(true);
@@ -17,7 +20,7 @@ function ChatListContainer() {
 
   useEffect(() => {
     query();
-  }, [filterBy]);
+  }, [filterBy, currentChatId]);
 
   return (
     <section className="chat-list-container">
