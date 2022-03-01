@@ -31,8 +31,9 @@ function ChatRoomHeader({ closeMobileChatRoom }) {
         <div className="avatar-container">
           <img src={currChat.thumbnail} className="avatar" />
         </div>
-        <div className="title">
+        <div className="chat-title flex col">
           <p>{currChat.name}</p>
+          <span>{currChat.online && "online"}</span>
         </div>
       </div>
       <div className="chat-icons flex align-center">

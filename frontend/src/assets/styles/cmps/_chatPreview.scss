@@ -70,6 +70,10 @@
     p {
         @include trim;
     }
+    &.typing {
+        color: $primary-green;
+        font-weight: 600;
+    }
 }
 .extra-preview-icons {
     display: flex;

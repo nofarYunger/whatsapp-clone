@@ -10,14 +10,19 @@
     padding: 0 15px 0 0;
     overflow: hidden;
 }
-.title p {
+.chat-title p {
     @include trim;
 }
 
 .chat-info,
-.title {
+.chat-title {
     flex-grow: 1;
     overflow: hidden;
+    span {
+        font-weight: 400;
+        color: $txt-grey;
+        font-size: 0.8rem;
+    }
 }
 .chat-icons,
 .avatar-container {

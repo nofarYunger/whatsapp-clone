@@ -11,8 +11,8 @@ function ChatApp() {
   return (
     <main className="chat-app">
       <ChatListContainer />
-      <ChatRoom />
-      {!isMobile && !currentChatId && <IntroConnection />}
+
+      {!isMobile && !currentChatId ? <IntroConnection /> : <ChatRoom />}
     </main>
   );
 }

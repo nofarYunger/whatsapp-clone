@@ -41,8 +41,8 @@ function ChatPreview({ chat }) {
           </div>
         </div>
         <div className="bottom-row flex">
-          <div className="last-msg">
-            <p>{chat.lastMsg.content}</p>
+          <div className={`last-msg ${chat.typing ? "typing" : ""}`}>
+            <p>{chat.typing ? "typing..." : chat.lastMsg.content}</p>
           </div>
           <ul className="extra-preview-icons">
             {chat.pinned && (
