@@ -10,6 +10,7 @@ and may not be similar to other devices and operating systems.
 * [React](https://reactjs.org/) as client framework
 * [Sass](https://sass-lang.com/guide) for creating a more readable, efficient, clean code for the style 
 * [date-fns](https://date-fns.org/v2.28.0/docs/format) a library for formating dates into strings and calculating the distance between dates.  
+* [Redux](https://redux.js.org/) to manage and access my state from every component
  
  ## Installation
 clone this repo, go to its root directory, and run `npm install` to install its dependencies.
