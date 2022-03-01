@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Icon from "../util/Icon";
 import UseTimeFormat from "../../hooks/UseTimeFormat";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actions from "../../store/actions/chatAction";
+import { BsPinAngleFill } from "react-icons/bs";
+import OpenMenu from "../util/OpenMenu";
 
 function ChatPreview({ chat }) {
+  const [isOptionOpen, setIsOptionOpen] = useState(false);
   const { currentChatId } = useSelector((state) => state.chatReducer);
   const dispatch = useDispatch();
   const { updCurrChat } = bindActionCreators(actions, dispatch);
@@ -47,14 +50,27 @@ function ChatPreview({ chat }) {
           <ul className="extra-preview-icons">
             {chat.pinned && (
               <li className="pin" aria-label="Pinned">
-                <Icon id={"pinned"} />
+                <BsPinAngleFill />
               </li>
             )}
             {chat.unread !== 0 && (
               <li className="unread-badge">{chat.unread}</li>
             )}
-            <li className="open-menu-btn" aria-label="Menu">
+            <li
+              className="open-menu-btn"
+              aria-label="Menu"
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsOptionOpen((prevState) => !prevState);
+              }}
+            >
               <Icon id={"downArrow"} />
+              <div className={`menu-wrapper ${isOptionOpen ? "open" : ""}`}>
+                <OpenMenu
+                  options={options}
+                  closeMenu={() => setIsOptionOpen(false)}
+                />
+              </div>
             </li>
           </ul>
         </div>
@@ -64,3 +80,14 @@ function ChatPreview({ chat }) {
 }
 
 export default ChatPreview;
+
+const options = [
+  { title: "Archive chat", func: () => console.log("Archive chat") },
+  {
+    title: "Mute notifications",
+    func: () => console.log("Mute notifications"),
+  },
+  { title: "Delete Chat", func: () => console.log("Delete Chat") },
+  { title: "Pin chat", func: () => console.log("Pin chat") },
+  { title: "Mark as unread", func: () => console.log("Mark as unread") },
+];

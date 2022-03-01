@@ -7,9 +7,22 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 import { chatService } from "../../services/chatService";
 import Icon from "../util/Icon";
+import OpenMenu from "../util/OpenMenu";
+
+const options = [
+  { title: "Group info", func: () => console.log("Group info") },
+  { title: "Select messages", func: () => console.log("Select messages") },
+  {
+    title: "Mute notifications",
+    func: () => console.log("Mute notifications"),
+  },
+  { title: "Clear messages", func: () => console.log("Clear messages") },
+  { title: "Delete chat", func: () => console.log("Starred messages") },
+];
 
 function ChatRoomHeader({ closeMobileChatRoom }) {
   const [currChat, setCurrChat] = useState(null);
+  const [isOptionOpen, setIsOptionOpen] = useState(false);
   const { currentChatId } = useSelector((state) => state.chatReducer);
 
   useEffect(async () => {
@@ -46,8 +59,17 @@ function ChatRoomHeader({ closeMobileChatRoom }) {
         <div className="icon-wrapper mobile-only flex center">
           <FaVideo />
         </div>
-        <div className="icon-wrapper  flex center">
+        <div
+          className="icon-wrapper flex center"
+          onClick={() => setIsOptionOpen((prevState) => !prevState)}
+        >
           <Icon id="menu" />
+          <div className={`menu-wrapper ${isOptionOpen ? "open" : ""}`}>
+            <OpenMenu
+              options={options}
+              closeMenu={() => setIsOptionOpen(false)}
+            />
+          </div>
         </div>
       </div>
     </header>

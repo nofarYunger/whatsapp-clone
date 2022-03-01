@@ -2,8 +2,16 @@
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: $bg-white;
+    height: 100%;
 }
 .chat-list-container {
     overflow: hidden;
     background-color: $bg-white;
+    height: 100%;
+}
+.chat-list-wrapper {
+    height: 100%;
+    padding-bottom: 110px;
+    overflow-y: hidden;
+    width: 100%;
 }

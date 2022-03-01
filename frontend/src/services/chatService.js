@@ -44,7 +44,6 @@ async function getChatMessages(currChatId) {
 }
 
 async function _seenUnreadMsgs(chatId) {
-  console.log('lalalala');
   const chats = await getChats();
   const currChatIdx = chats.findIndex((chat) => chat.id === chatId);
   chats[currChatIdx].unread = 0;
@@ -53,7 +52,6 @@ async function _seenUnreadMsgs(chatId) {
 
 async function postMessage(msg) {
   msg.id = utilService.makeId();
-  console.log({ msg });
   try {
     const messages = await storageService.load("MESSAGES");
     messages.push(msg);

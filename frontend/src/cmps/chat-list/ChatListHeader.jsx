@@ -9,6 +9,14 @@ const headerBtns = [
   { icon: "menu", label: "Menu", onClick: true, className: "option-btn" },
 ];
 
+const options = [
+  { title: "New group", func: () => console.log("New group") },
+  { title: "Archived", func: () => console.log("Archived") },
+  { title: "Starred messages", func: () => console.log("Starred messages") },
+  { title: "Settings", func: () => console.log("Starred messages") },
+  { title: "Log out", func: () => console.log("Starred messages") },
+];
+
 function ChatListHeader() {
   const [isOptionOpen, setIsOptionOpen] = useState(false);
 
@@ -55,11 +63,3 @@ function ChatListHeader() {
 }
 
 export default ChatListHeader;
-
-const options = [
-  { title: "New group", func: () => console.log("New group") },
-  { title: "Archived", func: () => console.log("Archived") },
-  { title: "Starred messages", func: () => console.log("Starred messages") },
-  { title: "Settings", func: () => console.log("Starred messages") },
-  { title: "Log out", func: () => console.log("Starred messages") },
-];

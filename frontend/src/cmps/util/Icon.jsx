@@ -1,4 +1,4 @@
-import Icons from "./IconList";
+import Icons from "../../assets/icons/IconList";
 
 const allIcons = Icons;
 

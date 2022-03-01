@@ -114,6 +114,7 @@
     font-size: 0.75rem;
     font-weight: 500;
     margin-left: 8px;
+    margin-right: 8px;
 }
 .preview-content.unread {
     .last-msg-timestamp {
@@ -133,5 +134,6 @@
     .pin svg {
         width: 17px;
         height: 17px;
+        margin-right:3px ;
     }
 }

@@ -46,7 +46,7 @@ function MessageList({ msgs }) {
             return (
               <>
                 {isMsgInNewDay && (
-                  <div className="date-wrapper message-wrapper flex justify-center">
+                  <div key={idx} className="date-wrapper message-wrapper flex justify-center">
                     <div className="date-modal">{isMsgInNewDay}</div>
                   </div>
                 )}
