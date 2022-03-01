@@ -1,8 +1,8 @@
 # WhatsApp-clone
-WhatsApp clone - focused on pixel-perfect design and making the app aesthetic. support both desktop and mobile scenarios.
+WhatsApp clone - focused on pixel-perfect design and making the app aesthetic and responsive.
 The app design is based on my personal devices (laptop:ASUS ZenBook windows 11 and phone: PocoPhone F1 Xiaomi)
 and may not be similar to other devices and operating systems, like ios. 
-###### This app is designed only and at the moment doesn't support several users and saves data to a database.
+###### This is a design demo and doesnt function as a chat application yet, but in the future I may add a server. 
 
 ## Demo
 check out my demo [here](https://optimistic-heisenberg-7871bb.netlify.app/)
