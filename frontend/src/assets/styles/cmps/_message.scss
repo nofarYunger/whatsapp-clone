@@ -34,17 +34,18 @@
         background-color: $bg-white;
         margin-right: 30%;
 
+
         @media #{$breakpoint-mobile} {
-            margin-right: 20%;
+            margin-right: 10%;
         }
     }
     &.message-out {
         background-color: $msg-green;
         margin-left: 30%;
-    
+
 
         @media #{$breakpoint-mobile} {
-            margin-left: 20%;
+            margin-left: 10%;
         }
         span {
             position: relative;

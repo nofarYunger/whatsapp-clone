@@ -50,7 +50,10 @@ function ChatRoomFooter({ msgs, setMsgs }) {
           onClick={() => setIsAttachOpen((prevState) => !prevState)}
         >
           <Icon id={"attach"} />
-          <Attachments isAttachOpen={isAttachOpen} />
+          <Attachments
+            isAttachOpen={isAttachOpen}
+            setIsAttachOpen={setIsAttachOpen}
+          />
         </div>
         <div className="chat-input-wrapper">
           <input
