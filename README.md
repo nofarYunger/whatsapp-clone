@@ -4,7 +4,7 @@ The app design is based on my personal devices (laptop:ASUS ZenBook windows 11 a
 and may not be similar to other devices and operating systems, like ios. 
 ###### This is a design demo and doesnt function as a chat application yet, but in the future I may add a server. 
 
-## Demo
+# Demo
 Check out my demo [here](https://optimistic-heisenberg-7871bb.netlify.app/)
 
 ## Tech/framework used for client
